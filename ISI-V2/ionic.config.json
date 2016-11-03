@@ -1,6 +1,6 @@
 {
   "name": "ISI-V2",
-  "app_id": "",
+  "app_id": "com.kpit.mobility.ISIPOC",
   "v2": true,
   "typescript": true
 }
