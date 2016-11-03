@@ -1,0 +1,87 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Sign Up</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="padding page-parent">
+    <form class="form" id="nameform" name="view.registrationForm" novalidate="">
+        
+        <ion-list>
+
+            <ion-item class="textbox-background mob-content-center">
+                <ion-label floating>FirstName</ion-label>
+                <ion-input 
+                        type="text"
+                        name="firstname"
+                        ng-model="view.firstname"
+                        ng-maxlength="25"
+                        required>
+                </ion-input>
+            </ion-item>
+            
+            <ion-item class="textbox-background mob-content-center">
+                <ion-label floating>LastName</ion-label>
+                <ion-input 
+                        type="text" 
+                        name="lastname"
+                        ng-model="view.lastname"
+                        ng-maxlength="25"
+                        required>
+                </ion-input>
+            </ion-item>
+            
+            <ion-item class="textbox-background mob-content-center">
+                <ion-label floating>Email</ion-label>
+                <ion-input 
+                        type="text" 
+                        name="email"
+                        ng-model="view.email"
+                        ng-change="view.onChange('email')"
+                        ng-maxlength="25"
+                        required>
+                </ion-input>
+            </ion-item>
+            
+            <ion-item class="textbox-background mob-content-center">
+                <ion-label floating>Password</ion-label>
+                <ion-input 
+                        type="password" 
+                        name="password"
+                        ng-model="view.password"
+                        ng-minlength="5"
+                        ng-maxlength="25"
+                        required>
+                </ion-input>
+            </ion-item>
+            
+            <ion-item class="textbox-background mob-content-center">
+                <ion-label floating>Confirm Password</ion-label>
+                <ion-input 
+                        type="password" 
+                        name="confirmpassword"
+                        ng-model="view.confirmpassword"
+                        ng-change="view.confirmPassword()"
+                        required>
+                </ion-input>
+            </ion-item>
+            
+            <ion-item class="textbox-background mob-content-center">
+                <ion-label floating>Mobile</ion-label>
+                <ion-input 
+                        type="tel" 
+                        name="mobile"
+                        ng-change="view.onChange('mobile')"
+                        ng-model="view.mobile"
+                        ng-minlength="10"
+                        ng-maxlength="10"
+                        required>
+                </ion-input>
+            </ion-item>
+    
+        </ion-list>
+        
+    </form>
+    <div class="bar bar-footer background-color registration-footer mob-content-center">
+        <button ion-button class="button-background" form="nameform" ng-click="view.registerNewUser(view.registrationForm)">Sign Up</button>
+    </div>
+</ion-content>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Ionic and Cordova app\Intuitive Surgical\ISI IONIC 2\ISI-V2\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\debug\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="d4084c5ead9b82407b45ca622b7e6ddc8d744411">
+        <dex dex="D:\Ionic and Cordova app\Intuitive Surgical\ISI IONIC 2\ISI-V2\platforms\android\build\intermediates\pre-dexed\debug\CordovaLib-unspecified-debug_6b6f8a771c4a8329988934725dd3a96236020799.jar" />
+    </item>
+
+</items>

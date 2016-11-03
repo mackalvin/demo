@@ -1,0 +1,116 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.page-parent {
+    margin: 0;
+    padding: 0;
+    background: url('../assets/img/bg-wrapcontainer.jpg') repeat;
+}
+.mob-nav-icon {
+    width: 25px;
+    height: 25px
+}
+
+.mob-flex-center {
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+    align-items: center;
+}
+
+.mob-content-center {
+	-webkit-box-pack: center;
+    justify-content: center;
+}
+
+.mob-content-end {
+	-webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.mob-col-40 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 40%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.mob-col-60 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 60%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.mob-col-30 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 30%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 30%;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+.mob-col-35 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 35%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 35%;
+    -ms-flex: 0 0 35%;
+    flex: 0 0 35%;
+    max-width: 35%;
+}
+
+.textbox-background{
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #87949c;
+  border-bottom-width: 1px;
+  width: 90%;
+}
+
+// .error-values{
+//   text-align: left;
+// }
+
+.input-has-focus .label-md[floating]{
+    color: #87949c !important;
+}
+
+.item-md.item-input.input-has-focus .item-inner{
+    border-bottom-color: #87949c !important;
+    box-shadow: inset 0 -1px 0 0 #87949c !important;
+}
+.button-background{
+	background-color: #87949c;
+	width: 275px !important;
+    height: 45px;
+    margin: 2% auto;
+    display: block;
+}
+.toolbar-background-md{
+    background-color: #bee1f7;
+}
