@@ -1,3 +1,12 @@
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -82,20 +91,12 @@ export var LoginPage = (function () {
         prompt.present();
     };
     ;
-    LoginPage.decorators = [
-        { type: Component, args: [{
-                    selector: 'page-login',
-                    templateUrl: 'login.html'
-                },] },
-    ];
-    /** @nocollapse */
-    LoginPage.ctorParameters = [
-        { type: NavController, },
-        { type: AlertController, },
-        { type: Http, },
-        { type: Auth, },
-        { type: Common, },
-    ];
+    LoginPage = __decorate([
+        Component({
+            selector: 'page-login',template:/*ion-inline-start:"/Users/mackalvin/Project/Intuitive Surgical/demo/ISI-V2/src/pages/login/login.html"*/'<ion-content class="padding page-parent">\n  <div>\n    <img src="assets/img/isi_logo.png">\n  </div>\n  <form name="signinForm" novalidate="">\n    \n    <ion-list>\n    \n      <ion-item class="textbox-background mob-content-center">\n        <ion-label floating>Username</ion-label>\n        <ion-input \n                  type="text"\n                  name="username" \n                  [(ngModel)]="username" \n                  ngModel minlength="5" \n                  ngModel maxlength="25" \n                  ngModel required>\n        </ion-input>\n      </ion-item>\n      \n      <ion-item class="textbox-background mob-content-center">\n        <ion-label floating>Password</ion-label>\n        <ion-input \n                  type="password"\n                  name="password"\n                  [(ngModel)]="password" \n                  ngModel minlength="5" \n                  ngModel maxlength="25" \n                  ngModel required>\n        </ion-input>\n      </ion-item>\n    \n    </ion-list>\n      \n     <p class="align-center">\n        <button ion-button class="button-background" (click)="signIn()">Sign In</button>\n     </p>\n  </form>\n  <p class="text-center mob-flex-center mob-content-center">\n    <a (click)="signUpForm()">Not Registered? Sign Up.</a>\n    <button class="button forget-password-button" (click)="forgotPassword()">Forgot Password</button>\n  </p>\n</ion-content>\n'/*ion-inline-end:"/Users/mackalvin/Project/Intuitive Surgical/demo/ISI-V2/src/pages/login/login.html"*/
+        }), 
+        __metadata('design:paramtypes', [NavController, AlertController, Http, Auth, Common])
+    ], LoginPage);
     return LoginPage;
 }());
 //# sourceMappingURL=login.js.map

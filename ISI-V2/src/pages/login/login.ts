@@ -4,7 +4,7 @@ import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Auth } from '../../providers/auth';
 import { Common } from '../../providers/common';
-import { NavController, AlertController, LoadingController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { RegistrationPage } from '../registration/registration';
 
 

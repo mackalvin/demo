@@ -1,3 +1,12 @@
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 import { Component } from '@angular/core';
 import { Auth } from '../../providers/auth';
 import { Common } from '../../providers/common';
@@ -30,18 +39,12 @@ export var RegistrationPage = (function () {
         });
     };
     ;
-    RegistrationPage.decorators = [
-        { type: Component, args: [{
-                    selector: 'page-registration',
-                    templateUrl: 'registration.html'
-                },] },
-    ];
-    /** @nocollapse */
-    RegistrationPage.ctorParameters = [
-        { type: NavController, },
-        { type: Auth, },
-        { type: Common, },
-    ];
+    RegistrationPage = __decorate([
+        Component({
+            selector: 'page-registration',template:/*ion-inline-start:"/Users/mackalvin/Project/Intuitive Surgical/demo/ISI-V2/src/pages/registration/registration.html"*/'<ion-header>\n\n    <ion-navbar>\n\n      <ion-title>Sign Up</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content class="padding page-parent">\n\n    <form class="form" id="nameform" novalidate="">\n\n        \n\n        <ion-list>\n\n\n\n            <ion-item class="textbox-background mob-content-center">\n\n                <ion-label floating>FirstName</ion-label>\n\n                <ion-input \n\n                        type="text"\n\n                        name="firstname"\n\n                        [(ngModel)]="firstname" \n\n                        ngModel maxlength="25" \n\n                        ngModel required>\n\n                </ion-input>\n\n            </ion-item>\n\n            \n\n            <ion-item class="textbox-background mob-content-center">\n\n                <ion-label floating>LastName</ion-label>\n\n                <ion-input \n\n                        type="text" \n\n                        name="lastname"\n\n                        [(ngModel)]="lastname"\n\n                        ngModel maxlength="25" \n\n                        ngModel required>\n\n                </ion-input>\n\n            </ion-item>\n\n            \n\n            <ion-item class="textbox-background mob-content-center">\n\n                <ion-label floating>Email</ion-label>\n\n                <ion-input \n\n                        type="text" \n\n                        name="email"\n\n                        [(ngModel)]="email"\n\n                        ngModel maxlength="25" \n\n                        ngModel required>\n\n                </ion-input>\n\n            </ion-item>\n\n            \n\n            <ion-item class="textbox-background mob-content-center">\n\n                <ion-label floating>Password</ion-label>\n\n                <ion-input \n\n                        type="password" \n\n                        name="password"\n\n                        [(ngModel)]="password"\n\n                        ngModel minlength="5"\n\n                        ngModel maxlength="25" \n\n                        ngModel required>\n\n                </ion-input>\n\n            </ion-item>\n\n            \n\n            <ion-item class="textbox-background mob-content-center">\n\n                <ion-label floating>Confirm Password</ion-label>\n\n                <ion-input \n\n                        type="password" \n\n                        name="confirmpassword"\n\n                        \n\n                        ng-change="view.confirmPassword()"\n\n                        ngModel required>\n\n                </ion-input>\n\n            </ion-item>\n\n            \n\n            <ion-item class="textbox-background mob-content-center">\n\n                <ion-label floating>Mobile</ion-label>\n\n                <ion-input \n\n                        type="tel" \n\n                        name="mobile"\n\n                        ng-change="view.onChange(\'mobile\')"\n\n                        [(ngModel)]="mobile"\n\n                        ngModel minlength="10"\n\n                        ngModel maxlength="10" \n\n                        ngModel required>\n\n                </ion-input>\n\n            </ion-item>\n\n    \n\n        </ion-list>\n\n        \n\n    </form>\n\n    <div class="bar bar-footer background-color registration-footer mob-content-center">\n\n        <button ion-button class="button-background" form="nameform" (click)="signUp()">Sign Up</button>\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"/Users/mackalvin/Project/Intuitive Surgical/demo/ISI-V2/src/pages/registration/registration.html"*/
+        }), 
+        __metadata('design:paramtypes', [NavController, Auth, Common])
+    ], RegistrationPage);
     return RegistrationPage;
 }());
 //# sourceMappingURL=registration.js.map
