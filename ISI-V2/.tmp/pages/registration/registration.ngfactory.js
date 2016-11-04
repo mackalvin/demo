@@ -15,38 +15,43 @@ import * as import4 from '@angular/core/src/linker/view_utils';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from 'ionic-angular/navigation/nav-controller';
-import * as import9 from '@angular/core/src/metadata/view';
-import * as import10 from '@angular/core/src/linker/component_factory';
-import * as import11 from 'ionic-angular/components/toolbar/toolbar';
-import * as import12 from 'ionic-angular/components/navbar/navbar';
-import * as import13 from 'ionic-angular/components/toolbar/toolbar-title';
-import * as import14 from 'ionic-angular/components/content/content';
-import * as import15 from '@angular/forms/src/directives/ng_form';
-import * as import16 from '@angular/forms/src/directives/ng_control_status';
-import * as import17 from 'ionic-angular/components/list/list';
-import * as import18 from 'ionic-angular/components/item/item';
-import * as import19 from '@angular/core/src/linker/query_list';
-import * as import20 from 'ionic-angular/components/label/label';
-import * as import21 from 'ionic-angular/components/input/input';
-import * as import22 from 'ionic-angular/components/button/button';
-import * as import23 from 'ionic-angular/config/config';
-import * as import24 from '@angular/core/src/linker/element_ref';
-import * as import25 from 'ionic-angular/navigation/view-controller';
-import * as import26 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
-import * as import27 from 'ionic-angular/components/app/app';
-import * as import28 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
-import * as import29 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
-import * as import30 from 'ionic-angular/util/keyboard';
-import * as import31 from '@angular/core/src/zone/ng_zone';
-import * as import32 from 'ionic-angular/components/tabs/tabs';
-import * as import33 from 'ionic-angular/gestures/gesture-controller';
-import * as import34 from '../../node_modules/ionic-angular/components/item/item.ngfactory';
-import * as import35 from 'ionic-angular/util/form';
-import * as import36 from '../../node_modules/ionic-angular/components/input/input.ngfactory';
-import * as import37 from 'ionic-angular/platform/platform';
-import * as import38 from '@angular/forms/src/directives/ng_control';
-import * as import39 from '../../node_modules/ionic-angular/components/button/button.ngfactory';
-import * as import40 from '@angular/forms/src/directives/control_container';
+import * as import9 from '../../providers/auth';
+import * as import10 from '../../providers/common';
+import * as import11 from '@angular/core/src/metadata/view';
+import * as import12 from '@angular/core/src/linker/component_factory';
+import * as import13 from 'ionic-angular/components/toolbar/toolbar';
+import * as import14 from 'ionic-angular/components/navbar/navbar';
+import * as import15 from 'ionic-angular/components/toolbar/toolbar-title';
+import * as import16 from 'ionic-angular/components/content/content';
+import * as import17 from '@angular/forms/src/directives/ng_form';
+import * as import18 from '@angular/forms/src/directives/ng_control_status';
+import * as import19 from 'ionic-angular/components/list/list';
+import * as import20 from 'ionic-angular/components/item/item';
+import * as import21 from '@angular/core/src/linker/query_list';
+import * as import22 from 'ionic-angular/components/label/label';
+import * as import23 from '@angular/forms/src/directives/validators';
+import * as import24 from '@angular/forms/src/directives/ng_model';
+import * as import25 from 'ionic-angular/components/input/input';
+import * as import26 from 'ionic-angular/components/button/button';
+import * as import27 from 'ionic-angular/config/config';
+import * as import28 from '@angular/core/src/linker/element_ref';
+import * as import29 from 'ionic-angular/navigation/view-controller';
+import * as import30 from '../../node_modules/ionic-angular/components/navbar/navbar.ngfactory';
+import * as import31 from 'ionic-angular/components/app/app';
+import * as import32 from '../../node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory';
+import * as import33 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
+import * as import34 from 'ionic-angular/util/keyboard';
+import * as import35 from '@angular/core/src/zone/ng_zone';
+import * as import36 from 'ionic-angular/components/tabs/tabs';
+import * as import37 from 'ionic-angular/gestures/gesture-controller';
+import * as import38 from '../../node_modules/ionic-angular/components/item/item.ngfactory';
+import * as import39 from 'ionic-angular/util/form';
+import * as import40 from '../../node_modules/ionic-angular/components/input/input.ngfactory';
+import * as import41 from 'ionic-angular/platform/platform';
+import * as import42 from '../../node_modules/ionic-angular/components/button/button.ngfactory';
+import * as import43 from '@angular/forms/src/validators';
+import * as import44 from '@angular/forms/src/directives/ng_control';
+import * as import45 from '@angular/forms/src/directives/control_container';
 var renderType_RegistrationPage_Host = null;
 var _View_RegistrationPage_Host0 = (function (_super) {
     __extends(_View_RegistrationPage_Host0, _super);
@@ -57,7 +62,7 @@ var _View_RegistrationPage_Host0 = (function (_super) {
         this._el_0 = this.selectOrCreateHostElement('page-registration', rootSelector, null);
         this._appEl_0 = new import2.AppElement(0, null, this, this._el_0);
         var compView_0 = viewFactory_RegistrationPage0(this.viewUtils, this.injector(0), this._appEl_0);
-        this._RegistrationPage_0_4 = new import3.RegistrationPage(this.parentInjector.get(import8.NavController));
+        this._RegistrationPage_0_4 = new import3.RegistrationPage(this.parentInjector.get(import8.NavController), this.parentInjector.get(import9.Auth), this.parentInjector.get(import10.Common));
         this._appEl_0.initComponent(this._RegistrationPage_0_4, [], compView_0);
         compView_0.create(this._RegistrationPage_0_4, this.projectableNodes, null);
         this.init([].concat([this._el_0]), [this._el_0], [], []);
@@ -73,11 +78,11 @@ var _View_RegistrationPage_Host0 = (function (_super) {
 }(import1.AppView));
 function viewFactory_RegistrationPage_Host0(viewUtils, parentInjector, declarationEl) {
     if ((renderType_RegistrationPage_Host === null)) {
-        (renderType_RegistrationPage_Host = viewUtils.createRenderComponentType('', 0, import9.ViewEncapsulation.None, [], {}));
+        (renderType_RegistrationPage_Host = viewUtils.createRenderComponentType('', 0, import11.ViewEncapsulation.None, [], {}));
     }
     return new _View_RegistrationPage_Host0(viewUtils, parentInjector, declarationEl);
 }
-export var RegistrationPageNgFactory = new import10.ComponentFactory('page-registration', viewFactory_RegistrationPage_Host0, import3.RegistrationPage);
+export var RegistrationPageNgFactory = new import12.ComponentFactory('page-registration', viewFactory_RegistrationPage_Host0, import3.RegistrationPage);
 var styles_RegistrationPage = [];
 var renderType_RegistrationPage = null;
 var _View_RegistrationPage0 = (function (_super) {
@@ -88,19 +93,19 @@ var _View_RegistrationPage0 = (function (_super) {
     _View_RegistrationPage0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
         this._el_0 = this.renderer.createElement(parentRenderNode, 'ion-header', null);
-        this._Header_0_3 = new import11.Header(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import25.ViewController, null));
+        this._Header_0_3 = new import13.Header(this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import29.ViewController, null));
         this._text_1 = this.renderer.createText(this._el_0, '\n    ', null);
         this._el_2 = this.renderer.createElement(this._el_0, 'ion-navbar', null);
         this.renderer.setElementAttribute(this._el_2, 'class', 'toolbar');
         this._appEl_2 = new import2.AppElement(2, 0, this, this._el_2);
-        var compView_2 = import26.viewFactory_Navbar0(this.viewUtils, this.injector(2), this._appEl_2);
-        this._Navbar_2_4 = new import12.Navbar(this.parentInjector.get(import27.App), this.parentInjector.get(import25.ViewController, null), this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_2), this.renderer);
+        var compView_2 = import30.viewFactory_Navbar0(this.viewUtils, this.injector(2), this._appEl_2);
+        this._Navbar_2_4 = new import14.Navbar(this.parentInjector.get(import31.App), this.parentInjector.get(import29.ViewController, null), this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_2), this.renderer);
         this._appEl_2.initComponent(this._Navbar_2_4, [], compView_2);
         this._text_3 = this.renderer.createText(null, '\n      ', null);
         this._el_4 = this.renderer.createElement(null, 'ion-title', null);
         this._appEl_4 = new import2.AppElement(4, 2, this, this._el_4);
-        var compView_4 = import28.viewFactory_ToolbarTitle0(this.viewUtils, this.injector(4), this._appEl_4);
-        this._ToolbarTitle_4_4 = new import13.ToolbarTitle(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_4), this.renderer, this.parentInjector.get(import11.Toolbar, null), this._Navbar_2_4);
+        var compView_4 = import32.viewFactory_ToolbarTitle0(this.viewUtils, this.injector(4), this._appEl_4);
+        this._ToolbarTitle_4_4 = new import15.ToolbarTitle(this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_4), this.renderer, this.parentInjector.get(import13.Toolbar, null), this._Navbar_2_4);
         this._appEl_4.initComponent(this._ToolbarTitle_4_4, [], compView_4);
         this._text_5 = this.renderer.createText(null, 'Sign Up', null);
         compView_4.create(this._ToolbarTitle_4_4, [[].concat([this._text_5])], null);
@@ -120,50 +125,58 @@ var _View_RegistrationPage0 = (function (_super) {
         this._el_9 = this.renderer.createElement(parentRenderNode, 'ion-content', null);
         this.renderer.setElementAttribute(this._el_9, 'class', 'padding page-parent');
         this._appEl_9 = new import2.AppElement(9, null, this, this._el_9);
-        var compView_9 = import29.viewFactory_Content0(this.viewUtils, this.injector(9), this._appEl_9);
-        this._Content_9_4 = new import14.Content(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_9), this.renderer, this.parentInjector.get(import27.App), this.parentInjector.get(import30.Keyboard), this.parentInjector.get(import31.NgZone), this.parentInjector.get(import25.ViewController, null), this.parentInjector.get(import32.Tabs, null));
+        var compView_9 = import33.viewFactory_Content0(this.viewUtils, this.injector(9), this._appEl_9);
+        this._Content_9_4 = new import16.Content(this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_9), this.renderer, this.parentInjector.get(import31.App), this.parentInjector.get(import34.Keyboard), this.parentInjector.get(import35.NgZone), this.parentInjector.get(import29.ViewController, null), this.parentInjector.get(import36.Tabs, null));
         this._appEl_9.initComponent(this._Content_9_4, [], compView_9);
         this._text_10 = this.renderer.createText(null, '\n    ', null);
         this._el_11 = this.renderer.createElement(null, 'form', null);
         this.renderer.setElementAttribute(this._el_11, 'class', 'form');
         this.renderer.setElementAttribute(this._el_11, 'id', 'nameform');
-        this.renderer.setElementAttribute(this._el_11, 'name', 'view.registrationForm');
         this.renderer.setElementAttribute(this._el_11, 'novalidate', '');
-        this._NgForm_11_3 = new import15.NgForm(null, null);
+        this._NgForm_11_3 = new import17.NgForm(null, null);
         this._ControlContainer_11_4 = this._NgForm_11_3;
-        this._NgControlStatusGroup_11_5 = new import16.NgControlStatusGroup(this._ControlContainer_11_4);
+        this._NgControlStatusGroup_11_5 = new import18.NgControlStatusGroup(this._ControlContainer_11_4);
         this._text_12 = this.renderer.createText(this._el_11, '\n        \n        ', null);
         this._el_13 = this.renderer.createElement(this._el_11, 'ion-list', null);
-        this._List_13_3 = new import17.List(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_13), this.renderer, this.parentInjector.get(import33.GestureController));
+        this._List_13_3 = new import19.List(this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_13), this.renderer, this.parentInjector.get(import37.GestureController));
         this._text_14 = this.renderer.createText(this._el_13, '\n\n            ', null);
         this._el_15 = this.renderer.createElement(this._el_13, 'ion-item', null);
         this.renderer.setElementAttribute(this._el_15, 'class', 'textbox-background mob-content-center item item-block');
         this._appEl_15 = new import2.AppElement(15, 13, this, this._el_15);
-        var compView_15 = import34.viewFactory_Item0(this.viewUtils, this.injector(15), this._appEl_15);
-        this._Item_15_4 = new import18.Item(this.parentInjector.get(import35.Form), this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_15), this.renderer);
-        this._ItemContent_15_5 = new import18.ItemContent();
-        this._query_Label_15_0 = new import19.QueryList();
-        this._query_Button_15_1 = new import19.QueryList();
-        this._query_Icon_15_2 = new import19.QueryList();
+        var compView_15 = import38.viewFactory_Item0(this.viewUtils, this.injector(15), this._appEl_15);
+        this._Item_15_4 = new import20.Item(this.parentInjector.get(import39.Form), this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_15), this.renderer);
+        this._ItemContent_15_5 = new import20.ItemContent();
+        this._query_Label_15_0 = new import21.QueryList();
+        this._query_Button_15_1 = new import21.QueryList();
+        this._query_Icon_15_2 = new import21.QueryList();
         this._appEl_15.initComponent(this._Item_15_4, [], compView_15);
         this._text_16 = this.renderer.createText(null, '\n                ', null);
         this._el_17 = this.renderer.createElement(null, 'ion-label', null);
         this.renderer.setElementAttribute(this._el_17, 'floating', '');
-        this._Label_17_3 = new import20.Label(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_17), this.renderer, '', null, null, null);
+        this._Label_17_3 = new import22.Label(this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_17), this.renderer, '', null, null, null);
         this._text_18 = this.renderer.createText(this._el_17, 'FirstName', null);
         this._text_19 = this.renderer.createText(null, '\n                ', null);
         this._el_20 = this.renderer.createElement(null, 'ion-input', null);
+        this.renderer.setElementAttribute(this._el_20, 'maxlength', '25');
         this.renderer.setElementAttribute(this._el_20, 'name', 'firstname');
-        this.renderer.setElementAttribute(this._el_20, 'ng-maxlength', '25');
-        this.renderer.setElementAttribute(this._el_20, 'ng-model', 'view.firstname');
+        this.renderer.setElementAttribute(this._el_20, 'ngModel', '');
         this.renderer.setElementAttribute(this._el_20, 'required', '');
         this.renderer.setElementAttribute(this._el_20, 'type', 'text');
         this._appEl_20 = new import2.AppElement(20, 15, this, this._el_20);
-        var compView_20 = import36.viewFactory_TextInput0(this.viewUtils, this.injector(20), this._appEl_20);
-        this._TextInput_20_4 = new import21.TextInput(this.parentInjector.get(import23.Config), this.parentInjector.get(import35.Form), this._Item_15_4, this.parentInjector.get(import27.App), this.parentInjector.get(import37.Platform), new import24.ElementRef(this._el_20), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import38.NgControl, null));
-        this._appEl_20.initComponent(this._TextInput_20_4, [], compView_20);
+        var compView_20 = import40.viewFactory_TextInput0(this.viewUtils, this.injector(20), this._appEl_20);
+        this._RequiredValidator_20_4 = new import23.RequiredValidator();
+        this._MaxLengthValidator_20_5 = new import23.MaxLengthValidator();
+        this._NG_VALIDATORS_20_6 = [
+            this._RequiredValidator_20_4,
+            this._MaxLengthValidator_20_5
+        ];
+        this._NgModel_20_7 = new import24.NgModel(this._ControlContainer_11_4, this._NG_VALIDATORS_20_6, null, null);
+        this._NgControl_20_8 = this._NgModel_20_7;
+        this._NgControlStatus_20_9 = new import18.NgControlStatus(this._NgControl_20_8);
+        this._TextInput_20_10 = new import25.TextInput(this.parentInjector.get(import27.Config), this.parentInjector.get(import39.Form), this._Item_15_4, this.parentInjector.get(import31.App), this.parentInjector.get(import41.Platform), new import28.ElementRef(this._el_20), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this._NgControl_20_8);
+        this._appEl_20.initComponent(this._TextInput_20_10, [], compView_20);
         this._text_21 = this.renderer.createText(null, '\n                ', null);
-        compView_20.create(this._TextInput_20_4, [], null);
+        compView_20.create(this._TextInput_20_10, [], null);
         this._text_22 = this.renderer.createText(null, '\n            ', null);
         this._query_Label_15_0.reset([this._Label_17_3]);
         this._Item_15_4.contentLabel = this._query_Label_15_0.first;
@@ -182,31 +195,40 @@ var _View_RegistrationPage0 = (function (_super) {
         this._el_24 = this.renderer.createElement(this._el_13, 'ion-item', null);
         this.renderer.setElementAttribute(this._el_24, 'class', 'textbox-background mob-content-center item item-block');
         this._appEl_24 = new import2.AppElement(24, 13, this, this._el_24);
-        var compView_24 = import34.viewFactory_Item0(this.viewUtils, this.injector(24), this._appEl_24);
-        this._Item_24_4 = new import18.Item(this.parentInjector.get(import35.Form), this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_24), this.renderer);
-        this._ItemContent_24_5 = new import18.ItemContent();
-        this._query_Label_24_0 = new import19.QueryList();
-        this._query_Button_24_1 = new import19.QueryList();
-        this._query_Icon_24_2 = new import19.QueryList();
+        var compView_24 = import38.viewFactory_Item0(this.viewUtils, this.injector(24), this._appEl_24);
+        this._Item_24_4 = new import20.Item(this.parentInjector.get(import39.Form), this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_24), this.renderer);
+        this._ItemContent_24_5 = new import20.ItemContent();
+        this._query_Label_24_0 = new import21.QueryList();
+        this._query_Button_24_1 = new import21.QueryList();
+        this._query_Icon_24_2 = new import21.QueryList();
         this._appEl_24.initComponent(this._Item_24_4, [], compView_24);
         this._text_25 = this.renderer.createText(null, '\n                ', null);
         this._el_26 = this.renderer.createElement(null, 'ion-label', null);
         this.renderer.setElementAttribute(this._el_26, 'floating', '');
-        this._Label_26_3 = new import20.Label(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_26), this.renderer, '', null, null, null);
+        this._Label_26_3 = new import22.Label(this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_26), this.renderer, '', null, null, null);
         this._text_27 = this.renderer.createText(this._el_26, 'LastName', null);
         this._text_28 = this.renderer.createText(null, '\n                ', null);
         this._el_29 = this.renderer.createElement(null, 'ion-input', null);
+        this.renderer.setElementAttribute(this._el_29, 'maxlength', '25');
         this.renderer.setElementAttribute(this._el_29, 'name', 'lastname');
-        this.renderer.setElementAttribute(this._el_29, 'ng-maxlength', '25');
-        this.renderer.setElementAttribute(this._el_29, 'ng-model', 'view.lastname');
+        this.renderer.setElementAttribute(this._el_29, 'ngModel', '');
         this.renderer.setElementAttribute(this._el_29, 'required', '');
         this.renderer.setElementAttribute(this._el_29, 'type', 'text');
         this._appEl_29 = new import2.AppElement(29, 24, this, this._el_29);
-        var compView_29 = import36.viewFactory_TextInput0(this.viewUtils, this.injector(29), this._appEl_29);
-        this._TextInput_29_4 = new import21.TextInput(this.parentInjector.get(import23.Config), this.parentInjector.get(import35.Form), this._Item_24_4, this.parentInjector.get(import27.App), this.parentInjector.get(import37.Platform), new import24.ElementRef(this._el_29), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import38.NgControl, null));
-        this._appEl_29.initComponent(this._TextInput_29_4, [], compView_29);
+        var compView_29 = import40.viewFactory_TextInput0(this.viewUtils, this.injector(29), this._appEl_29);
+        this._RequiredValidator_29_4 = new import23.RequiredValidator();
+        this._MaxLengthValidator_29_5 = new import23.MaxLengthValidator();
+        this._NG_VALIDATORS_29_6 = [
+            this._RequiredValidator_29_4,
+            this._MaxLengthValidator_29_5
+        ];
+        this._NgModel_29_7 = new import24.NgModel(this._ControlContainer_11_4, this._NG_VALIDATORS_29_6, null, null);
+        this._NgControl_29_8 = this._NgModel_29_7;
+        this._NgControlStatus_29_9 = new import18.NgControlStatus(this._NgControl_29_8);
+        this._TextInput_29_10 = new import25.TextInput(this.parentInjector.get(import27.Config), this.parentInjector.get(import39.Form), this._Item_24_4, this.parentInjector.get(import31.App), this.parentInjector.get(import41.Platform), new import28.ElementRef(this._el_29), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this._NgControl_29_8);
+        this._appEl_29.initComponent(this._TextInput_29_10, [], compView_29);
         this._text_30 = this.renderer.createText(null, '\n                ', null);
-        compView_29.create(this._TextInput_29_4, [], null);
+        compView_29.create(this._TextInput_29_10, [], null);
         this._text_31 = this.renderer.createText(null, '\n            ', null);
         this._query_Label_24_0.reset([this._Label_26_3]);
         this._Item_24_4.contentLabel = this._query_Label_24_0.first;
@@ -225,32 +247,40 @@ var _View_RegistrationPage0 = (function (_super) {
         this._el_33 = this.renderer.createElement(this._el_13, 'ion-item', null);
         this.renderer.setElementAttribute(this._el_33, 'class', 'textbox-background mob-content-center item item-block');
         this._appEl_33 = new import2.AppElement(33, 13, this, this._el_33);
-        var compView_33 = import34.viewFactory_Item0(this.viewUtils, this.injector(33), this._appEl_33);
-        this._Item_33_4 = new import18.Item(this.parentInjector.get(import35.Form), this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_33), this.renderer);
-        this._ItemContent_33_5 = new import18.ItemContent();
-        this._query_Label_33_0 = new import19.QueryList();
-        this._query_Button_33_1 = new import19.QueryList();
-        this._query_Icon_33_2 = new import19.QueryList();
+        var compView_33 = import38.viewFactory_Item0(this.viewUtils, this.injector(33), this._appEl_33);
+        this._Item_33_4 = new import20.Item(this.parentInjector.get(import39.Form), this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_33), this.renderer);
+        this._ItemContent_33_5 = new import20.ItemContent();
+        this._query_Label_33_0 = new import21.QueryList();
+        this._query_Button_33_1 = new import21.QueryList();
+        this._query_Icon_33_2 = new import21.QueryList();
         this._appEl_33.initComponent(this._Item_33_4, [], compView_33);
         this._text_34 = this.renderer.createText(null, '\n                ', null);
         this._el_35 = this.renderer.createElement(null, 'ion-label', null);
         this.renderer.setElementAttribute(this._el_35, 'floating', '');
-        this._Label_35_3 = new import20.Label(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_35), this.renderer, '', null, null, null);
+        this._Label_35_3 = new import22.Label(this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_35), this.renderer, '', null, null, null);
         this._text_36 = this.renderer.createText(this._el_35, 'Email', null);
         this._text_37 = this.renderer.createText(null, '\n                ', null);
         this._el_38 = this.renderer.createElement(null, 'ion-input', null);
+        this.renderer.setElementAttribute(this._el_38, 'maxlength', '25');
         this.renderer.setElementAttribute(this._el_38, 'name', 'email');
-        this.renderer.setElementAttribute(this._el_38, 'ng-change', 'view.onChange(\'email\')');
-        this.renderer.setElementAttribute(this._el_38, 'ng-maxlength', '25');
-        this.renderer.setElementAttribute(this._el_38, 'ng-model', 'view.email');
+        this.renderer.setElementAttribute(this._el_38, 'ngModel', '');
         this.renderer.setElementAttribute(this._el_38, 'required', '');
         this.renderer.setElementAttribute(this._el_38, 'type', 'text');
         this._appEl_38 = new import2.AppElement(38, 33, this, this._el_38);
-        var compView_38 = import36.viewFactory_TextInput0(this.viewUtils, this.injector(38), this._appEl_38);
-        this._TextInput_38_4 = new import21.TextInput(this.parentInjector.get(import23.Config), this.parentInjector.get(import35.Form), this._Item_33_4, this.parentInjector.get(import27.App), this.parentInjector.get(import37.Platform), new import24.ElementRef(this._el_38), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import38.NgControl, null));
-        this._appEl_38.initComponent(this._TextInput_38_4, [], compView_38);
+        var compView_38 = import40.viewFactory_TextInput0(this.viewUtils, this.injector(38), this._appEl_38);
+        this._RequiredValidator_38_4 = new import23.RequiredValidator();
+        this._MaxLengthValidator_38_5 = new import23.MaxLengthValidator();
+        this._NG_VALIDATORS_38_6 = [
+            this._RequiredValidator_38_4,
+            this._MaxLengthValidator_38_5
+        ];
+        this._NgModel_38_7 = new import24.NgModel(this._ControlContainer_11_4, this._NG_VALIDATORS_38_6, null, null);
+        this._NgControl_38_8 = this._NgModel_38_7;
+        this._NgControlStatus_38_9 = new import18.NgControlStatus(this._NgControl_38_8);
+        this._TextInput_38_10 = new import25.TextInput(this.parentInjector.get(import27.Config), this.parentInjector.get(import39.Form), this._Item_33_4, this.parentInjector.get(import31.App), this.parentInjector.get(import41.Platform), new import28.ElementRef(this._el_38), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this._NgControl_38_8);
+        this._appEl_38.initComponent(this._TextInput_38_10, [], compView_38);
         this._text_39 = this.renderer.createText(null, '\n                ', null);
-        compView_38.create(this._TextInput_38_4, [], null);
+        compView_38.create(this._TextInput_38_10, [], null);
         this._text_40 = this.renderer.createText(null, '\n            ', null);
         this._query_Label_33_0.reset([this._Label_35_3]);
         this._Item_33_4.contentLabel = this._query_Label_33_0.first;
@@ -269,32 +299,43 @@ var _View_RegistrationPage0 = (function (_super) {
         this._el_42 = this.renderer.createElement(this._el_13, 'ion-item', null);
         this.renderer.setElementAttribute(this._el_42, 'class', 'textbox-background mob-content-center item item-block');
         this._appEl_42 = new import2.AppElement(42, 13, this, this._el_42);
-        var compView_42 = import34.viewFactory_Item0(this.viewUtils, this.injector(42), this._appEl_42);
-        this._Item_42_4 = new import18.Item(this.parentInjector.get(import35.Form), this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_42), this.renderer);
-        this._ItemContent_42_5 = new import18.ItemContent();
-        this._query_Label_42_0 = new import19.QueryList();
-        this._query_Button_42_1 = new import19.QueryList();
-        this._query_Icon_42_2 = new import19.QueryList();
+        var compView_42 = import38.viewFactory_Item0(this.viewUtils, this.injector(42), this._appEl_42);
+        this._Item_42_4 = new import20.Item(this.parentInjector.get(import39.Form), this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_42), this.renderer);
+        this._ItemContent_42_5 = new import20.ItemContent();
+        this._query_Label_42_0 = new import21.QueryList();
+        this._query_Button_42_1 = new import21.QueryList();
+        this._query_Icon_42_2 = new import21.QueryList();
         this._appEl_42.initComponent(this._Item_42_4, [], compView_42);
         this._text_43 = this.renderer.createText(null, '\n                ', null);
         this._el_44 = this.renderer.createElement(null, 'ion-label', null);
         this.renderer.setElementAttribute(this._el_44, 'floating', '');
-        this._Label_44_3 = new import20.Label(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_44), this.renderer, '', null, null, null);
+        this._Label_44_3 = new import22.Label(this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_44), this.renderer, '', null, null, null);
         this._text_45 = this.renderer.createText(this._el_44, 'Password', null);
         this._text_46 = this.renderer.createText(null, '\n                ', null);
         this._el_47 = this.renderer.createElement(null, 'ion-input', null);
+        this.renderer.setElementAttribute(this._el_47, 'maxlength', '25');
+        this.renderer.setElementAttribute(this._el_47, 'minlength', '5');
         this.renderer.setElementAttribute(this._el_47, 'name', 'password');
-        this.renderer.setElementAttribute(this._el_47, 'ng-maxlength', '25');
-        this.renderer.setElementAttribute(this._el_47, 'ng-minlength', '5');
-        this.renderer.setElementAttribute(this._el_47, 'ng-model', 'view.password');
+        this.renderer.setElementAttribute(this._el_47, 'ngModel', '');
         this.renderer.setElementAttribute(this._el_47, 'required', '');
         this.renderer.setElementAttribute(this._el_47, 'type', 'password');
         this._appEl_47 = new import2.AppElement(47, 42, this, this._el_47);
-        var compView_47 = import36.viewFactory_TextInput0(this.viewUtils, this.injector(47), this._appEl_47);
-        this._TextInput_47_4 = new import21.TextInput(this.parentInjector.get(import23.Config), this.parentInjector.get(import35.Form), this._Item_42_4, this.parentInjector.get(import27.App), this.parentInjector.get(import37.Platform), new import24.ElementRef(this._el_47), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import38.NgControl, null));
-        this._appEl_47.initComponent(this._TextInput_47_4, [], compView_47);
+        var compView_47 = import40.viewFactory_TextInput0(this.viewUtils, this.injector(47), this._appEl_47);
+        this._RequiredValidator_47_4 = new import23.RequiredValidator();
+        this._MinLengthValidator_47_5 = new import23.MinLengthValidator();
+        this._MaxLengthValidator_47_6 = new import23.MaxLengthValidator();
+        this._NG_VALIDATORS_47_7 = [
+            this._RequiredValidator_47_4,
+            this._MinLengthValidator_47_5,
+            this._MaxLengthValidator_47_6
+        ];
+        this._NgModel_47_8 = new import24.NgModel(this._ControlContainer_11_4, this._NG_VALIDATORS_47_7, null, null);
+        this._NgControl_47_9 = this._NgModel_47_8;
+        this._NgControlStatus_47_10 = new import18.NgControlStatus(this._NgControl_47_9);
+        this._TextInput_47_11 = new import25.TextInput(this.parentInjector.get(import27.Config), this.parentInjector.get(import39.Form), this._Item_42_4, this.parentInjector.get(import31.App), this.parentInjector.get(import41.Platform), new import28.ElementRef(this._el_47), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this._NgControl_47_9);
+        this._appEl_47.initComponent(this._TextInput_47_11, [], compView_47);
         this._text_48 = this.renderer.createText(null, '\n                ', null);
-        compView_47.create(this._TextInput_47_4, [], null);
+        compView_47.create(this._TextInput_47_11, [], null);
         this._text_49 = this.renderer.createText(null, '\n            ', null);
         this._query_Label_42_0.reset([this._Label_44_3]);
         this._Item_42_4.contentLabel = this._query_Label_42_0.first;
@@ -313,31 +354,36 @@ var _View_RegistrationPage0 = (function (_super) {
         this._el_51 = this.renderer.createElement(this._el_13, 'ion-item', null);
         this.renderer.setElementAttribute(this._el_51, 'class', 'textbox-background mob-content-center item item-block');
         this._appEl_51 = new import2.AppElement(51, 13, this, this._el_51);
-        var compView_51 = import34.viewFactory_Item0(this.viewUtils, this.injector(51), this._appEl_51);
-        this._Item_51_4 = new import18.Item(this.parentInjector.get(import35.Form), this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_51), this.renderer);
-        this._ItemContent_51_5 = new import18.ItemContent();
-        this._query_Label_51_0 = new import19.QueryList();
-        this._query_Button_51_1 = new import19.QueryList();
-        this._query_Icon_51_2 = new import19.QueryList();
+        var compView_51 = import38.viewFactory_Item0(this.viewUtils, this.injector(51), this._appEl_51);
+        this._Item_51_4 = new import20.Item(this.parentInjector.get(import39.Form), this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_51), this.renderer);
+        this._ItemContent_51_5 = new import20.ItemContent();
+        this._query_Label_51_0 = new import21.QueryList();
+        this._query_Button_51_1 = new import21.QueryList();
+        this._query_Icon_51_2 = new import21.QueryList();
         this._appEl_51.initComponent(this._Item_51_4, [], compView_51);
         this._text_52 = this.renderer.createText(null, '\n                ', null);
         this._el_53 = this.renderer.createElement(null, 'ion-label', null);
         this.renderer.setElementAttribute(this._el_53, 'floating', '');
-        this._Label_53_3 = new import20.Label(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_53), this.renderer, '', null, null, null);
+        this._Label_53_3 = new import22.Label(this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_53), this.renderer, '', null, null, null);
         this._text_54 = this.renderer.createText(this._el_53, 'Confirm Password', null);
         this._text_55 = this.renderer.createText(null, '\n                ', null);
         this._el_56 = this.renderer.createElement(null, 'ion-input', null);
         this.renderer.setElementAttribute(this._el_56, 'name', 'confirmpassword');
         this.renderer.setElementAttribute(this._el_56, 'ng-change', 'view.confirmPassword()');
-        this.renderer.setElementAttribute(this._el_56, 'ng-model', 'view.confirmpassword');
+        this.renderer.setElementAttribute(this._el_56, 'ngModel', '');
         this.renderer.setElementAttribute(this._el_56, 'required', '');
         this.renderer.setElementAttribute(this._el_56, 'type', 'password');
         this._appEl_56 = new import2.AppElement(56, 51, this, this._el_56);
-        var compView_56 = import36.viewFactory_TextInput0(this.viewUtils, this.injector(56), this._appEl_56);
-        this._TextInput_56_4 = new import21.TextInput(this.parentInjector.get(import23.Config), this.parentInjector.get(import35.Form), this._Item_51_4, this.parentInjector.get(import27.App), this.parentInjector.get(import37.Platform), new import24.ElementRef(this._el_56), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import38.NgControl, null));
-        this._appEl_56.initComponent(this._TextInput_56_4, [], compView_56);
+        var compView_56 = import40.viewFactory_TextInput0(this.viewUtils, this.injector(56), this._appEl_56);
+        this._RequiredValidator_56_4 = new import23.RequiredValidator();
+        this._NG_VALIDATORS_56_5 = [this._RequiredValidator_56_4];
+        this._NgModel_56_6 = new import24.NgModel(this._ControlContainer_11_4, this._NG_VALIDATORS_56_5, null, null);
+        this._NgControl_56_7 = this._NgModel_56_6;
+        this._NgControlStatus_56_8 = new import18.NgControlStatus(this._NgControl_56_7);
+        this._TextInput_56_9 = new import25.TextInput(this.parentInjector.get(import27.Config), this.parentInjector.get(import39.Form), this._Item_51_4, this.parentInjector.get(import31.App), this.parentInjector.get(import41.Platform), new import28.ElementRef(this._el_56), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this._NgControl_56_7);
+        this._appEl_56.initComponent(this._TextInput_56_9, [], compView_56);
         this._text_57 = this.renderer.createText(null, '\n                ', null);
-        compView_56.create(this._TextInput_56_4, [], null);
+        compView_56.create(this._TextInput_56_9, [], null);
         this._text_58 = this.renderer.createText(null, '\n            ', null);
         this._query_Label_51_0.reset([this._Label_53_3]);
         this._Item_51_4.contentLabel = this._query_Label_51_0.first;
@@ -356,33 +402,44 @@ var _View_RegistrationPage0 = (function (_super) {
         this._el_60 = this.renderer.createElement(this._el_13, 'ion-item', null);
         this.renderer.setElementAttribute(this._el_60, 'class', 'textbox-background mob-content-center item item-block');
         this._appEl_60 = new import2.AppElement(60, 13, this, this._el_60);
-        var compView_60 = import34.viewFactory_Item0(this.viewUtils, this.injector(60), this._appEl_60);
-        this._Item_60_4 = new import18.Item(this.parentInjector.get(import35.Form), this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_60), this.renderer);
-        this._ItemContent_60_5 = new import18.ItemContent();
-        this._query_Label_60_0 = new import19.QueryList();
-        this._query_Button_60_1 = new import19.QueryList();
-        this._query_Icon_60_2 = new import19.QueryList();
+        var compView_60 = import38.viewFactory_Item0(this.viewUtils, this.injector(60), this._appEl_60);
+        this._Item_60_4 = new import20.Item(this.parentInjector.get(import39.Form), this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_60), this.renderer);
+        this._ItemContent_60_5 = new import20.ItemContent();
+        this._query_Label_60_0 = new import21.QueryList();
+        this._query_Button_60_1 = new import21.QueryList();
+        this._query_Icon_60_2 = new import21.QueryList();
         this._appEl_60.initComponent(this._Item_60_4, [], compView_60);
         this._text_61 = this.renderer.createText(null, '\n                ', null);
         this._el_62 = this.renderer.createElement(null, 'ion-label', null);
         this.renderer.setElementAttribute(this._el_62, 'floating', '');
-        this._Label_62_3 = new import20.Label(this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_62), this.renderer, '', null, null, null);
+        this._Label_62_3 = new import22.Label(this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_62), this.renderer, '', null, null, null);
         this._text_63 = this.renderer.createText(this._el_62, 'Mobile', null);
         this._text_64 = this.renderer.createText(null, '\n                ', null);
         this._el_65 = this.renderer.createElement(null, 'ion-input', null);
+        this.renderer.setElementAttribute(this._el_65, 'maxlength', '10');
+        this.renderer.setElementAttribute(this._el_65, 'minlength', '10');
         this.renderer.setElementAttribute(this._el_65, 'name', 'mobile');
         this.renderer.setElementAttribute(this._el_65, 'ng-change', 'view.onChange(\'mobile\')');
-        this.renderer.setElementAttribute(this._el_65, 'ng-maxlength', '10');
-        this.renderer.setElementAttribute(this._el_65, 'ng-minlength', '10');
-        this.renderer.setElementAttribute(this._el_65, 'ng-model', 'view.mobile');
+        this.renderer.setElementAttribute(this._el_65, 'ngModel', '');
         this.renderer.setElementAttribute(this._el_65, 'required', '');
         this.renderer.setElementAttribute(this._el_65, 'type', 'tel');
         this._appEl_65 = new import2.AppElement(65, 60, this, this._el_65);
-        var compView_65 = import36.viewFactory_TextInput0(this.viewUtils, this.injector(65), this._appEl_65);
-        this._TextInput_65_4 = new import21.TextInput(this.parentInjector.get(import23.Config), this.parentInjector.get(import35.Form), this._Item_60_4, this.parentInjector.get(import27.App), this.parentInjector.get(import37.Platform), new import24.ElementRef(this._el_65), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this.parentInjector.get(import38.NgControl, null));
-        this._appEl_65.initComponent(this._TextInput_65_4, [], compView_65);
+        var compView_65 = import40.viewFactory_TextInput0(this.viewUtils, this.injector(65), this._appEl_65);
+        this._RequiredValidator_65_4 = new import23.RequiredValidator();
+        this._MinLengthValidator_65_5 = new import23.MinLengthValidator();
+        this._MaxLengthValidator_65_6 = new import23.MaxLengthValidator();
+        this._NG_VALIDATORS_65_7 = [
+            this._RequiredValidator_65_4,
+            this._MinLengthValidator_65_5,
+            this._MaxLengthValidator_65_6
+        ];
+        this._NgModel_65_8 = new import24.NgModel(this._ControlContainer_11_4, this._NG_VALIDATORS_65_7, null, null);
+        this._NgControl_65_9 = this._NgModel_65_8;
+        this._NgControlStatus_65_10 = new import18.NgControlStatus(this._NgControl_65_9);
+        this._TextInput_65_11 = new import25.TextInput(this.parentInjector.get(import27.Config), this.parentInjector.get(import39.Form), this._Item_60_4, this.parentInjector.get(import31.App), this.parentInjector.get(import41.Platform), new import28.ElementRef(this._el_65), this.renderer, this._Content_9_4, this.parentInjector.get(import8.NavController, null), this._NgControl_65_9);
+        this._appEl_65.initComponent(this._TextInput_65_11, [], compView_65);
         this._text_66 = this.renderer.createText(null, '\n                ', null);
-        compView_65.create(this._TextInput_65_4, [], null);
+        compView_65.create(this._TextInput_65_11, [], null);
         this._text_67 = this.renderer.createText(null, '\n            ', null);
         this._query_Label_60_0.reset([this._Label_62_3]);
         this._Item_60_4.contentLabel = this._query_Label_60_0.first;
@@ -407,10 +464,9 @@ var _View_RegistrationPage0 = (function (_super) {
         this.renderer.setElementAttribute(this._el_73, 'class', 'button-background');
         this.renderer.setElementAttribute(this._el_73, 'form', 'nameform');
         this.renderer.setElementAttribute(this._el_73, 'ion-button', '');
-        this.renderer.setElementAttribute(this._el_73, 'ng-click', 'view.registerNewUser(view.registrationForm)');
         this._appEl_73 = new import2.AppElement(73, 71, this, this._el_73);
-        var compView_73 = import39.viewFactory_Button0(this.viewUtils, this.injector(73), this._appEl_73);
-        this._Button_73_4 = new import22.Button(null, '', this.parentInjector.get(import23.Config), new import24.ElementRef(this._el_73), this.renderer);
+        var compView_73 = import42.viewFactory_Button0(this.viewUtils, this.injector(73), this._appEl_73);
+        this._Button_73_4 = new import26.Button(null, '', this.parentInjector.get(import27.Config), new import28.ElementRef(this._el_73), this.renderer);
         this._appEl_73.initComponent(this._Button_73_4, [], compView_73);
         this._text_74 = this.renderer.createText(null, 'Sign Up', null);
         compView_73.create(this._Button_73_4, [[].concat([this._text_74])], null);
@@ -438,12 +494,97 @@ var _View_RegistrationPage0 = (function (_super) {
         this._expr_8 = import7.UNINITIALIZED;
         this._expr_9 = import7.UNINITIALIZED;
         this._expr_10 = import7.UNINITIALIZED;
-        this._expr_11 = import7.UNINITIALIZED;
+        var disposable_2 = this.renderer.listen(this._el_20, 'ngModelChange', this.eventHandler(this._handle_ngModelChange_20_0.bind(this)));
         this._expr_12 = import7.UNINITIALIZED;
         this._expr_13 = import7.UNINITIALIZED;
         this._expr_14 = import7.UNINITIALIZED;
         this._expr_15 = import7.UNINITIALIZED;
         this._expr_16 = import7.UNINITIALIZED;
+        this._expr_17 = import7.UNINITIALIZED;
+        var subscription_0 = this._NgModel_20_7.update.subscribe(this.eventHandler(this._handle_ngModelChange_20_0.bind(this)));
+        this._expr_18 = import7.UNINITIALIZED;
+        this._expr_19 = import7.UNINITIALIZED;
+        this._expr_20 = import7.UNINITIALIZED;
+        this._expr_21 = import7.UNINITIALIZED;
+        this._expr_22 = import7.UNINITIALIZED;
+        this._expr_23 = import7.UNINITIALIZED;
+        this._expr_24 = import7.UNINITIALIZED;
+        var disposable_3 = this.renderer.listen(this._el_29, 'ngModelChange', this.eventHandler(this._handle_ngModelChange_29_0.bind(this)));
+        this._expr_26 = import7.UNINITIALIZED;
+        this._expr_27 = import7.UNINITIALIZED;
+        this._expr_28 = import7.UNINITIALIZED;
+        this._expr_29 = import7.UNINITIALIZED;
+        this._expr_30 = import7.UNINITIALIZED;
+        this._expr_31 = import7.UNINITIALIZED;
+        var subscription_1 = this._NgModel_29_7.update.subscribe(this.eventHandler(this._handle_ngModelChange_29_0.bind(this)));
+        this._expr_32 = import7.UNINITIALIZED;
+        this._expr_33 = import7.UNINITIALIZED;
+        this._expr_34 = import7.UNINITIALIZED;
+        this._expr_35 = import7.UNINITIALIZED;
+        this._expr_36 = import7.UNINITIALIZED;
+        this._expr_37 = import7.UNINITIALIZED;
+        this._expr_38 = import7.UNINITIALIZED;
+        var disposable_4 = this.renderer.listen(this._el_38, 'ngModelChange', this.eventHandler(this._handle_ngModelChange_38_0.bind(this)));
+        this._expr_40 = import7.UNINITIALIZED;
+        this._expr_41 = import7.UNINITIALIZED;
+        this._expr_42 = import7.UNINITIALIZED;
+        this._expr_43 = import7.UNINITIALIZED;
+        this._expr_44 = import7.UNINITIALIZED;
+        this._expr_45 = import7.UNINITIALIZED;
+        var subscription_2 = this._NgModel_38_7.update.subscribe(this.eventHandler(this._handle_ngModelChange_38_0.bind(this)));
+        this._expr_46 = import7.UNINITIALIZED;
+        this._expr_47 = import7.UNINITIALIZED;
+        this._expr_48 = import7.UNINITIALIZED;
+        this._expr_49 = import7.UNINITIALIZED;
+        this._expr_50 = import7.UNINITIALIZED;
+        this._expr_51 = import7.UNINITIALIZED;
+        this._expr_52 = import7.UNINITIALIZED;
+        var disposable_5 = this.renderer.listen(this._el_47, 'ngModelChange', this.eventHandler(this._handle_ngModelChange_47_0.bind(this)));
+        this._expr_54 = import7.UNINITIALIZED;
+        this._expr_55 = import7.UNINITIALIZED;
+        this._expr_56 = import7.UNINITIALIZED;
+        this._expr_57 = import7.UNINITIALIZED;
+        this._expr_58 = import7.UNINITIALIZED;
+        this._expr_59 = import7.UNINITIALIZED;
+        this._expr_60 = import7.UNINITIALIZED;
+        this._expr_61 = import7.UNINITIALIZED;
+        var subscription_3 = this._NgModel_47_8.update.subscribe(this.eventHandler(this._handle_ngModelChange_47_0.bind(this)));
+        this._expr_62 = import7.UNINITIALIZED;
+        this._expr_63 = import7.UNINITIALIZED;
+        this._expr_64 = import7.UNINITIALIZED;
+        this._expr_65 = import7.UNINITIALIZED;
+        this._expr_66 = import7.UNINITIALIZED;
+        this._expr_67 = import7.UNINITIALIZED;
+        this._expr_68 = import7.UNINITIALIZED;
+        this._expr_69 = import7.UNINITIALIZED;
+        this._expr_70 = import7.UNINITIALIZED;
+        this._expr_71 = import7.UNINITIALIZED;
+        this._expr_72 = import7.UNINITIALIZED;
+        this._expr_73 = import7.UNINITIALIZED;
+        this._expr_74 = import7.UNINITIALIZED;
+        this._expr_75 = import7.UNINITIALIZED;
+        this._expr_76 = import7.UNINITIALIZED;
+        this._expr_77 = import7.UNINITIALIZED;
+        this._expr_78 = import7.UNINITIALIZED;
+        this._expr_79 = import7.UNINITIALIZED;
+        var disposable_6 = this.renderer.listen(this._el_65, 'ngModelChange', this.eventHandler(this._handle_ngModelChange_65_0.bind(this)));
+        this._expr_81 = import7.UNINITIALIZED;
+        this._expr_82 = import7.UNINITIALIZED;
+        this._expr_83 = import7.UNINITIALIZED;
+        this._expr_84 = import7.UNINITIALIZED;
+        this._expr_85 = import7.UNINITIALIZED;
+        this._expr_86 = import7.UNINITIALIZED;
+        this._expr_87 = import7.UNINITIALIZED;
+        this._expr_88 = import7.UNINITIALIZED;
+        var subscription_4 = this._NgModel_65_8.update.subscribe(this.eventHandler(this._handle_ngModelChange_65_0.bind(this)));
+        this._expr_89 = import7.UNINITIALIZED;
+        this._expr_90 = import7.UNINITIALIZED;
+        this._expr_91 = import7.UNINITIALIZED;
+        this._expr_92 = import7.UNINITIALIZED;
+        this._expr_93 = import7.UNINITIALIZED;
+        this._expr_94 = import7.UNINITIALIZED;
+        this._expr_95 = import7.UNINITIALIZED;
+        var disposable_7 = this.renderer.listen(this._el_73, 'click', this.eventHandler(this._handle_click_73_0.bind(this)));
         this.init([], [
             this._el_0,
             this._text_1,
@@ -524,163 +665,540 @@ var _View_RegistrationPage0 = (function (_super) {
             this._text_76
         ], [
             disposable_0,
-            disposable_1
-        ], []);
+            disposable_1,
+            disposable_2,
+            disposable_3,
+            disposable_4,
+            disposable_5,
+            disposable_6,
+            disposable_7
+        ], [
+            subscription_0,
+            subscription_1,
+            subscription_2,
+            subscription_3,
+            subscription_4
+        ]);
         return null;
     };
     _View_RegistrationPage0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import13.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) {
+        if (((token === import15.ToolbarTitle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 5)))) {
             return this._ToolbarTitle_4_4;
         }
-        if (((token === import12.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) {
+        if (((token === import14.Navbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 6)))) {
             return this._Navbar_2_4;
         }
-        if (((token === import11.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) {
+        if (((token === import13.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) {
             return this._Header_0_3;
         }
-        if (((token === import20.Label) && ((17 <= requestNodeIndex) && (requestNodeIndex <= 18)))) {
+        if (((token === import22.Label) && ((17 <= requestNodeIndex) && (requestNodeIndex <= 18)))) {
             return this._Label_17_3;
         }
-        if (((token === import21.TextInput) && ((20 <= requestNodeIndex) && (requestNodeIndex <= 21)))) {
-            return this._TextInput_20_4;
+        if (((token === import23.RequiredValidator) && ((20 <= requestNodeIndex) && (requestNodeIndex <= 21)))) {
+            return this._RequiredValidator_20_4;
         }
-        if (((token === import18.Item) && ((15 <= requestNodeIndex) && (requestNodeIndex <= 22)))) {
+        if (((token === import23.MaxLengthValidator) && ((20 <= requestNodeIndex) && (requestNodeIndex <= 21)))) {
+            return this._MaxLengthValidator_20_5;
+        }
+        if (((token === import43.NG_VALIDATORS) && ((20 <= requestNodeIndex) && (requestNodeIndex <= 21)))) {
+            return this._NG_VALIDATORS_20_6;
+        }
+        if (((token === import24.NgModel) && ((20 <= requestNodeIndex) && (requestNodeIndex <= 21)))) {
+            return this._NgModel_20_7;
+        }
+        if (((token === import44.NgControl) && ((20 <= requestNodeIndex) && (requestNodeIndex <= 21)))) {
+            return this._NgControl_20_8;
+        }
+        if (((token === import18.NgControlStatus) && ((20 <= requestNodeIndex) && (requestNodeIndex <= 21)))) {
+            return this._NgControlStatus_20_9;
+        }
+        if (((token === import25.TextInput) && ((20 <= requestNodeIndex) && (requestNodeIndex <= 21)))) {
+            return this._TextInput_20_10;
+        }
+        if (((token === import20.Item) && ((15 <= requestNodeIndex) && (requestNodeIndex <= 22)))) {
             return this._Item_15_4;
         }
-        if (((token === import18.ItemContent) && ((15 <= requestNodeIndex) && (requestNodeIndex <= 22)))) {
+        if (((token === import20.ItemContent) && ((15 <= requestNodeIndex) && (requestNodeIndex <= 22)))) {
             return this._ItemContent_15_5;
         }
-        if (((token === import20.Label) && ((26 <= requestNodeIndex) && (requestNodeIndex <= 27)))) {
+        if (((token === import22.Label) && ((26 <= requestNodeIndex) && (requestNodeIndex <= 27)))) {
             return this._Label_26_3;
         }
-        if (((token === import21.TextInput) && ((29 <= requestNodeIndex) && (requestNodeIndex <= 30)))) {
-            return this._TextInput_29_4;
+        if (((token === import23.RequiredValidator) && ((29 <= requestNodeIndex) && (requestNodeIndex <= 30)))) {
+            return this._RequiredValidator_29_4;
         }
-        if (((token === import18.Item) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 31)))) {
+        if (((token === import23.MaxLengthValidator) && ((29 <= requestNodeIndex) && (requestNodeIndex <= 30)))) {
+            return this._MaxLengthValidator_29_5;
+        }
+        if (((token === import43.NG_VALIDATORS) && ((29 <= requestNodeIndex) && (requestNodeIndex <= 30)))) {
+            return this._NG_VALIDATORS_29_6;
+        }
+        if (((token === import24.NgModel) && ((29 <= requestNodeIndex) && (requestNodeIndex <= 30)))) {
+            return this._NgModel_29_7;
+        }
+        if (((token === import44.NgControl) && ((29 <= requestNodeIndex) && (requestNodeIndex <= 30)))) {
+            return this._NgControl_29_8;
+        }
+        if (((token === import18.NgControlStatus) && ((29 <= requestNodeIndex) && (requestNodeIndex <= 30)))) {
+            return this._NgControlStatus_29_9;
+        }
+        if (((token === import25.TextInput) && ((29 <= requestNodeIndex) && (requestNodeIndex <= 30)))) {
+            return this._TextInput_29_10;
+        }
+        if (((token === import20.Item) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 31)))) {
             return this._Item_24_4;
         }
-        if (((token === import18.ItemContent) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 31)))) {
+        if (((token === import20.ItemContent) && ((24 <= requestNodeIndex) && (requestNodeIndex <= 31)))) {
             return this._ItemContent_24_5;
         }
-        if (((token === import20.Label) && ((35 <= requestNodeIndex) && (requestNodeIndex <= 36)))) {
+        if (((token === import22.Label) && ((35 <= requestNodeIndex) && (requestNodeIndex <= 36)))) {
             return this._Label_35_3;
         }
-        if (((token === import21.TextInput) && ((38 <= requestNodeIndex) && (requestNodeIndex <= 39)))) {
-            return this._TextInput_38_4;
+        if (((token === import23.RequiredValidator) && ((38 <= requestNodeIndex) && (requestNodeIndex <= 39)))) {
+            return this._RequiredValidator_38_4;
         }
-        if (((token === import18.Item) && ((33 <= requestNodeIndex) && (requestNodeIndex <= 40)))) {
+        if (((token === import23.MaxLengthValidator) && ((38 <= requestNodeIndex) && (requestNodeIndex <= 39)))) {
+            return this._MaxLengthValidator_38_5;
+        }
+        if (((token === import43.NG_VALIDATORS) && ((38 <= requestNodeIndex) && (requestNodeIndex <= 39)))) {
+            return this._NG_VALIDATORS_38_6;
+        }
+        if (((token === import24.NgModel) && ((38 <= requestNodeIndex) && (requestNodeIndex <= 39)))) {
+            return this._NgModel_38_7;
+        }
+        if (((token === import44.NgControl) && ((38 <= requestNodeIndex) && (requestNodeIndex <= 39)))) {
+            return this._NgControl_38_8;
+        }
+        if (((token === import18.NgControlStatus) && ((38 <= requestNodeIndex) && (requestNodeIndex <= 39)))) {
+            return this._NgControlStatus_38_9;
+        }
+        if (((token === import25.TextInput) && ((38 <= requestNodeIndex) && (requestNodeIndex <= 39)))) {
+            return this._TextInput_38_10;
+        }
+        if (((token === import20.Item) && ((33 <= requestNodeIndex) && (requestNodeIndex <= 40)))) {
             return this._Item_33_4;
         }
-        if (((token === import18.ItemContent) && ((33 <= requestNodeIndex) && (requestNodeIndex <= 40)))) {
+        if (((token === import20.ItemContent) && ((33 <= requestNodeIndex) && (requestNodeIndex <= 40)))) {
             return this._ItemContent_33_5;
         }
-        if (((token === import20.Label) && ((44 <= requestNodeIndex) && (requestNodeIndex <= 45)))) {
+        if (((token === import22.Label) && ((44 <= requestNodeIndex) && (requestNodeIndex <= 45)))) {
             return this._Label_44_3;
         }
-        if (((token === import21.TextInput) && ((47 <= requestNodeIndex) && (requestNodeIndex <= 48)))) {
-            return this._TextInput_47_4;
+        if (((token === import23.RequiredValidator) && ((47 <= requestNodeIndex) && (requestNodeIndex <= 48)))) {
+            return this._RequiredValidator_47_4;
         }
-        if (((token === import18.Item) && ((42 <= requestNodeIndex) && (requestNodeIndex <= 49)))) {
+        if (((token === import23.MinLengthValidator) && ((47 <= requestNodeIndex) && (requestNodeIndex <= 48)))) {
+            return this._MinLengthValidator_47_5;
+        }
+        if (((token === import23.MaxLengthValidator) && ((47 <= requestNodeIndex) && (requestNodeIndex <= 48)))) {
+            return this._MaxLengthValidator_47_6;
+        }
+        if (((token === import43.NG_VALIDATORS) && ((47 <= requestNodeIndex) && (requestNodeIndex <= 48)))) {
+            return this._NG_VALIDATORS_47_7;
+        }
+        if (((token === import24.NgModel) && ((47 <= requestNodeIndex) && (requestNodeIndex <= 48)))) {
+            return this._NgModel_47_8;
+        }
+        if (((token === import44.NgControl) && ((47 <= requestNodeIndex) && (requestNodeIndex <= 48)))) {
+            return this._NgControl_47_9;
+        }
+        if (((token === import18.NgControlStatus) && ((47 <= requestNodeIndex) && (requestNodeIndex <= 48)))) {
+            return this._NgControlStatus_47_10;
+        }
+        if (((token === import25.TextInput) && ((47 <= requestNodeIndex) && (requestNodeIndex <= 48)))) {
+            return this._TextInput_47_11;
+        }
+        if (((token === import20.Item) && ((42 <= requestNodeIndex) && (requestNodeIndex <= 49)))) {
             return this._Item_42_4;
         }
-        if (((token === import18.ItemContent) && ((42 <= requestNodeIndex) && (requestNodeIndex <= 49)))) {
+        if (((token === import20.ItemContent) && ((42 <= requestNodeIndex) && (requestNodeIndex <= 49)))) {
             return this._ItemContent_42_5;
         }
-        if (((token === import20.Label) && ((53 <= requestNodeIndex) && (requestNodeIndex <= 54)))) {
+        if (((token === import22.Label) && ((53 <= requestNodeIndex) && (requestNodeIndex <= 54)))) {
             return this._Label_53_3;
         }
-        if (((token === import21.TextInput) && ((56 <= requestNodeIndex) && (requestNodeIndex <= 57)))) {
-            return this._TextInput_56_4;
+        if (((token === import23.RequiredValidator) && ((56 <= requestNodeIndex) && (requestNodeIndex <= 57)))) {
+            return this._RequiredValidator_56_4;
         }
-        if (((token === import18.Item) && ((51 <= requestNodeIndex) && (requestNodeIndex <= 58)))) {
+        if (((token === import43.NG_VALIDATORS) && ((56 <= requestNodeIndex) && (requestNodeIndex <= 57)))) {
+            return this._NG_VALIDATORS_56_5;
+        }
+        if (((token === import24.NgModel) && ((56 <= requestNodeIndex) && (requestNodeIndex <= 57)))) {
+            return this._NgModel_56_6;
+        }
+        if (((token === import44.NgControl) && ((56 <= requestNodeIndex) && (requestNodeIndex <= 57)))) {
+            return this._NgControl_56_7;
+        }
+        if (((token === import18.NgControlStatus) && ((56 <= requestNodeIndex) && (requestNodeIndex <= 57)))) {
+            return this._NgControlStatus_56_8;
+        }
+        if (((token === import25.TextInput) && ((56 <= requestNodeIndex) && (requestNodeIndex <= 57)))) {
+            return this._TextInput_56_9;
+        }
+        if (((token === import20.Item) && ((51 <= requestNodeIndex) && (requestNodeIndex <= 58)))) {
             return this._Item_51_4;
         }
-        if (((token === import18.ItemContent) && ((51 <= requestNodeIndex) && (requestNodeIndex <= 58)))) {
+        if (((token === import20.ItemContent) && ((51 <= requestNodeIndex) && (requestNodeIndex <= 58)))) {
             return this._ItemContent_51_5;
         }
-        if (((token === import20.Label) && ((62 <= requestNodeIndex) && (requestNodeIndex <= 63)))) {
+        if (((token === import22.Label) && ((62 <= requestNodeIndex) && (requestNodeIndex <= 63)))) {
             return this._Label_62_3;
         }
-        if (((token === import21.TextInput) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 66)))) {
-            return this._TextInput_65_4;
+        if (((token === import23.RequiredValidator) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 66)))) {
+            return this._RequiredValidator_65_4;
         }
-        if (((token === import18.Item) && ((60 <= requestNodeIndex) && (requestNodeIndex <= 67)))) {
+        if (((token === import23.MinLengthValidator) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 66)))) {
+            return this._MinLengthValidator_65_5;
+        }
+        if (((token === import23.MaxLengthValidator) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 66)))) {
+            return this._MaxLengthValidator_65_6;
+        }
+        if (((token === import43.NG_VALIDATORS) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 66)))) {
+            return this._NG_VALIDATORS_65_7;
+        }
+        if (((token === import24.NgModel) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 66)))) {
+            return this._NgModel_65_8;
+        }
+        if (((token === import44.NgControl) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 66)))) {
+            return this._NgControl_65_9;
+        }
+        if (((token === import18.NgControlStatus) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 66)))) {
+            return this._NgControlStatus_65_10;
+        }
+        if (((token === import25.TextInput) && ((65 <= requestNodeIndex) && (requestNodeIndex <= 66)))) {
+            return this._TextInput_65_11;
+        }
+        if (((token === import20.Item) && ((60 <= requestNodeIndex) && (requestNodeIndex <= 67)))) {
             return this._Item_60_4;
         }
-        if (((token === import18.ItemContent) && ((60 <= requestNodeIndex) && (requestNodeIndex <= 67)))) {
+        if (((token === import20.ItemContent) && ((60 <= requestNodeIndex) && (requestNodeIndex <= 67)))) {
             return this._ItemContent_60_5;
         }
-        if (((token === import17.List) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 68)))) {
+        if (((token === import19.List) && ((13 <= requestNodeIndex) && (requestNodeIndex <= 68)))) {
             return this._List_13_3;
         }
-        if (((token === import15.NgForm) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 69)))) {
+        if (((token === import17.NgForm) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 69)))) {
             return this._NgForm_11_3;
         }
-        if (((token === import40.ControlContainer) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 69)))) {
+        if (((token === import45.ControlContainer) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 69)))) {
             return this._ControlContainer_11_4;
         }
-        if (((token === import16.NgControlStatusGroup) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 69)))) {
+        if (((token === import18.NgControlStatusGroup) && ((11 <= requestNodeIndex) && (requestNodeIndex <= 69)))) {
             return this._NgControlStatusGroup_11_5;
         }
-        if (((token === import22.Button) && ((73 <= requestNodeIndex) && (requestNodeIndex <= 74)))) {
+        if (((token === import26.Button) && ((73 <= requestNodeIndex) && (requestNodeIndex <= 74)))) {
             return this._Button_73_4;
         }
-        if (((token === import14.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 76)))) {
+        if (((token === import16.Content) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 76)))) {
             return this._Content_9_4;
         }
         return notFoundResult;
     };
     _View_RegistrationPage0.prototype.detectChangesInternal = function (throwOnChange) {
+        var changes = null;
         if (((this.numberOfChecks === 0) && !throwOnChange)) {
             this._Content_9_4.ngOnInit();
         }
-        var currVal_11 = 'text';
-        if (import4.checkBinding(throwOnChange, this._expr_11, currVal_11)) {
-            this._TextInput_20_4.type = currVal_11;
-            this._expr_11 = currVal_11;
-        }
-        if (((this.numberOfChecks === 0) && !throwOnChange)) {
-            this._TextInput_20_4.ngOnInit();
-        }
-        var currVal_12 = 'text';
+        var currVal_12 = '';
         if (import4.checkBinding(throwOnChange, this._expr_12, currVal_12)) {
-            this._TextInput_29_4.type = currVal_12;
+            this._RequiredValidator_20_4.required = currVal_12;
             this._expr_12 = currVal_12;
         }
-        if (((this.numberOfChecks === 0) && !throwOnChange)) {
-            this._TextInput_29_4.ngOnInit();
-        }
-        var currVal_13 = 'text';
-        if (import4.checkBinding(throwOnChange, this._expr_13, currVal_13)) {
-            this._TextInput_38_4.type = currVal_13;
-            this._expr_13 = currVal_13;
-        }
-        if (((this.numberOfChecks === 0) && !throwOnChange)) {
-            this._TextInput_38_4.ngOnInit();
-        }
-        var currVal_14 = 'password';
+        changes = null;
+        var currVal_14 = '25';
         if (import4.checkBinding(throwOnChange, this._expr_14, currVal_14)) {
-            this._TextInput_47_4.type = currVal_14;
+            this._MaxLengthValidator_20_5.maxlength = currVal_14;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['maxlength'] = new import7.SimpleChange(this._expr_14, currVal_14);
             this._expr_14 = currVal_14;
         }
-        if (((this.numberOfChecks === 0) && !throwOnChange)) {
-            this._TextInput_47_4.ngOnInit();
+        if ((changes !== null)) {
+            this._MaxLengthValidator_20_5.ngOnChanges(changes);
         }
-        var currVal_15 = 'password';
-        if (import4.checkBinding(throwOnChange, this._expr_15, currVal_15)) {
-            this._TextInput_56_4.type = currVal_15;
-            this._expr_15 = currVal_15;
-        }
-        if (((this.numberOfChecks === 0) && !throwOnChange)) {
-            this._TextInput_56_4.ngOnInit();
-        }
-        var currVal_16 = 'tel';
+        changes = null;
+        var currVal_16 = 'firstname';
         if (import4.checkBinding(throwOnChange, this._expr_16, currVal_16)) {
-            this._TextInput_65_4.type = currVal_16;
+            this._NgModel_20_7.name = currVal_16;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['name'] = new import7.SimpleChange(this._expr_16, currVal_16);
             this._expr_16 = currVal_16;
         }
+        var currVal_17 = this.context.firstname;
+        if (import4.checkBinding(throwOnChange, this._expr_17, currVal_17)) {
+            this._NgModel_20_7.model = currVal_17;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['model'] = new import7.SimpleChange(this._expr_17, currVal_17);
+            this._expr_17 = currVal_17;
+        }
+        if ((changes !== null)) {
+            this._NgModel_20_7.ngOnChanges(changes);
+        }
+        var currVal_24 = 'text';
+        if (import4.checkBinding(throwOnChange, this._expr_24, currVal_24)) {
+            this._TextInput_20_10.type = currVal_24;
+            this._expr_24 = currVal_24;
+        }
         if (((this.numberOfChecks === 0) && !throwOnChange)) {
-            this._TextInput_65_4.ngOnInit();
+            this._TextInput_20_10.ngOnInit();
+        }
+        var currVal_26 = '';
+        if (import4.checkBinding(throwOnChange, this._expr_26, currVal_26)) {
+            this._RequiredValidator_29_4.required = currVal_26;
+            this._expr_26 = currVal_26;
+        }
+        changes = null;
+        var currVal_28 = '25';
+        if (import4.checkBinding(throwOnChange, this._expr_28, currVal_28)) {
+            this._MaxLengthValidator_29_5.maxlength = currVal_28;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['maxlength'] = new import7.SimpleChange(this._expr_28, currVal_28);
+            this._expr_28 = currVal_28;
+        }
+        if ((changes !== null)) {
+            this._MaxLengthValidator_29_5.ngOnChanges(changes);
+        }
+        changes = null;
+        var currVal_30 = 'lastname';
+        if (import4.checkBinding(throwOnChange, this._expr_30, currVal_30)) {
+            this._NgModel_29_7.name = currVal_30;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['name'] = new import7.SimpleChange(this._expr_30, currVal_30);
+            this._expr_30 = currVal_30;
+        }
+        var currVal_31 = this.context.lastname;
+        if (import4.checkBinding(throwOnChange, this._expr_31, currVal_31)) {
+            this._NgModel_29_7.model = currVal_31;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['model'] = new import7.SimpleChange(this._expr_31, currVal_31);
+            this._expr_31 = currVal_31;
+        }
+        if ((changes !== null)) {
+            this._NgModel_29_7.ngOnChanges(changes);
+        }
+        var currVal_38 = 'text';
+        if (import4.checkBinding(throwOnChange, this._expr_38, currVal_38)) {
+            this._TextInput_29_10.type = currVal_38;
+            this._expr_38 = currVal_38;
+        }
+        if (((this.numberOfChecks === 0) && !throwOnChange)) {
+            this._TextInput_29_10.ngOnInit();
+        }
+        var currVal_40 = '';
+        if (import4.checkBinding(throwOnChange, this._expr_40, currVal_40)) {
+            this._RequiredValidator_38_4.required = currVal_40;
+            this._expr_40 = currVal_40;
+        }
+        changes = null;
+        var currVal_42 = '25';
+        if (import4.checkBinding(throwOnChange, this._expr_42, currVal_42)) {
+            this._MaxLengthValidator_38_5.maxlength = currVal_42;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['maxlength'] = new import7.SimpleChange(this._expr_42, currVal_42);
+            this._expr_42 = currVal_42;
+        }
+        if ((changes !== null)) {
+            this._MaxLengthValidator_38_5.ngOnChanges(changes);
+        }
+        changes = null;
+        var currVal_44 = 'email';
+        if (import4.checkBinding(throwOnChange, this._expr_44, currVal_44)) {
+            this._NgModel_38_7.name = currVal_44;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['name'] = new import7.SimpleChange(this._expr_44, currVal_44);
+            this._expr_44 = currVal_44;
+        }
+        var currVal_45 = this.context.email;
+        if (import4.checkBinding(throwOnChange, this._expr_45, currVal_45)) {
+            this._NgModel_38_7.model = currVal_45;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['model'] = new import7.SimpleChange(this._expr_45, currVal_45);
+            this._expr_45 = currVal_45;
+        }
+        if ((changes !== null)) {
+            this._NgModel_38_7.ngOnChanges(changes);
+        }
+        var currVal_52 = 'text';
+        if (import4.checkBinding(throwOnChange, this._expr_52, currVal_52)) {
+            this._TextInput_38_10.type = currVal_52;
+            this._expr_52 = currVal_52;
+        }
+        if (((this.numberOfChecks === 0) && !throwOnChange)) {
+            this._TextInput_38_10.ngOnInit();
+        }
+        var currVal_54 = '';
+        if (import4.checkBinding(throwOnChange, this._expr_54, currVal_54)) {
+            this._RequiredValidator_47_4.required = currVal_54;
+            this._expr_54 = currVal_54;
+        }
+        changes = null;
+        var currVal_56 = '5';
+        if (import4.checkBinding(throwOnChange, this._expr_56, currVal_56)) {
+            this._MinLengthValidator_47_5.minlength = currVal_56;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['minlength'] = new import7.SimpleChange(this._expr_56, currVal_56);
+            this._expr_56 = currVal_56;
+        }
+        if ((changes !== null)) {
+            this._MinLengthValidator_47_5.ngOnChanges(changes);
+        }
+        changes = null;
+        var currVal_58 = '25';
+        if (import4.checkBinding(throwOnChange, this._expr_58, currVal_58)) {
+            this._MaxLengthValidator_47_6.maxlength = currVal_58;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['maxlength'] = new import7.SimpleChange(this._expr_58, currVal_58);
+            this._expr_58 = currVal_58;
+        }
+        if ((changes !== null)) {
+            this._MaxLengthValidator_47_6.ngOnChanges(changes);
+        }
+        changes = null;
+        var currVal_60 = 'password';
+        if (import4.checkBinding(throwOnChange, this._expr_60, currVal_60)) {
+            this._NgModel_47_8.name = currVal_60;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['name'] = new import7.SimpleChange(this._expr_60, currVal_60);
+            this._expr_60 = currVal_60;
+        }
+        var currVal_61 = this.context.password;
+        if (import4.checkBinding(throwOnChange, this._expr_61, currVal_61)) {
+            this._NgModel_47_8.model = currVal_61;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['model'] = new import7.SimpleChange(this._expr_61, currVal_61);
+            this._expr_61 = currVal_61;
+        }
+        if ((changes !== null)) {
+            this._NgModel_47_8.ngOnChanges(changes);
+        }
+        var currVal_68 = 'password';
+        if (import4.checkBinding(throwOnChange, this._expr_68, currVal_68)) {
+            this._TextInput_47_11.type = currVal_68;
+            this._expr_68 = currVal_68;
+        }
+        if (((this.numberOfChecks === 0) && !throwOnChange)) {
+            this._TextInput_47_11.ngOnInit();
+        }
+        var currVal_69 = '';
+        if (import4.checkBinding(throwOnChange, this._expr_69, currVal_69)) {
+            this._RequiredValidator_56_4.required = currVal_69;
+            this._expr_69 = currVal_69;
+        }
+        changes = null;
+        var currVal_71 = 'confirmpassword';
+        if (import4.checkBinding(throwOnChange, this._expr_71, currVal_71)) {
+            this._NgModel_56_6.name = currVal_71;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['name'] = new import7.SimpleChange(this._expr_71, currVal_71);
+            this._expr_71 = currVal_71;
+        }
+        var currVal_72 = '';
+        if (import4.checkBinding(throwOnChange, this._expr_72, currVal_72)) {
+            this._NgModel_56_6.model = currVal_72;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['model'] = new import7.SimpleChange(this._expr_72, currVal_72);
+            this._expr_72 = currVal_72;
+        }
+        if ((changes !== null)) {
+            this._NgModel_56_6.ngOnChanges(changes);
+        }
+        var currVal_79 = 'password';
+        if (import4.checkBinding(throwOnChange, this._expr_79, currVal_79)) {
+            this._TextInput_56_9.type = currVal_79;
+            this._expr_79 = currVal_79;
+        }
+        if (((this.numberOfChecks === 0) && !throwOnChange)) {
+            this._TextInput_56_9.ngOnInit();
+        }
+        var currVal_81 = '';
+        if (import4.checkBinding(throwOnChange, this._expr_81, currVal_81)) {
+            this._RequiredValidator_65_4.required = currVal_81;
+            this._expr_81 = currVal_81;
+        }
+        changes = null;
+        var currVal_83 = '10';
+        if (import4.checkBinding(throwOnChange, this._expr_83, currVal_83)) {
+            this._MinLengthValidator_65_5.minlength = currVal_83;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['minlength'] = new import7.SimpleChange(this._expr_83, currVal_83);
+            this._expr_83 = currVal_83;
+        }
+        if ((changes !== null)) {
+            this._MinLengthValidator_65_5.ngOnChanges(changes);
+        }
+        changes = null;
+        var currVal_85 = '10';
+        if (import4.checkBinding(throwOnChange, this._expr_85, currVal_85)) {
+            this._MaxLengthValidator_65_6.maxlength = currVal_85;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['maxlength'] = new import7.SimpleChange(this._expr_85, currVal_85);
+            this._expr_85 = currVal_85;
+        }
+        if ((changes !== null)) {
+            this._MaxLengthValidator_65_6.ngOnChanges(changes);
+        }
+        changes = null;
+        var currVal_87 = 'mobile';
+        if (import4.checkBinding(throwOnChange, this._expr_87, currVal_87)) {
+            this._NgModel_65_8.name = currVal_87;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['name'] = new import7.SimpleChange(this._expr_87, currVal_87);
+            this._expr_87 = currVal_87;
+        }
+        var currVal_88 = this.context.mobile;
+        if (import4.checkBinding(throwOnChange, this._expr_88, currVal_88)) {
+            this._NgModel_65_8.model = currVal_88;
+            if ((changes === null)) {
+                (changes = {});
+            }
+            changes['model'] = new import7.SimpleChange(this._expr_88, currVal_88);
+            this._expr_88 = currVal_88;
+        }
+        if ((changes !== null)) {
+            this._NgModel_65_8.ngOnChanges(changes);
+        }
+        var currVal_95 = 'tel';
+        if (import4.checkBinding(throwOnChange, this._expr_95, currVal_95)) {
+            this._TextInput_65_11.type = currVal_95;
+            this._expr_95 = currVal_95;
+        }
+        if (((this.numberOfChecks === 0) && !throwOnChange)) {
+            this._TextInput_65_11.ngOnInit();
         }
         this.detectContentChildrenChanges(throwOnChange);
         if (!throwOnChange) {
@@ -744,27 +1262,27 @@ var _View_RegistrationPage0 = (function (_super) {
                 this._Item_60_4._icons = this._query_Icon_60_2;
                 this._query_Icon_60_2.notifyOnChanges();
             }
-            this._TextInput_20_4.ngAfterContentChecked();
+            this._TextInput_20_10.ngAfterContentChecked();
             if ((this.numberOfChecks === 0)) {
                 this._Item_15_4.ngAfterContentInit();
             }
-            this._TextInput_29_4.ngAfterContentChecked();
+            this._TextInput_29_10.ngAfterContentChecked();
             if ((this.numberOfChecks === 0)) {
                 this._Item_24_4.ngAfterContentInit();
             }
-            this._TextInput_38_4.ngAfterContentChecked();
+            this._TextInput_38_10.ngAfterContentChecked();
             if ((this.numberOfChecks === 0)) {
                 this._Item_33_4.ngAfterContentInit();
             }
-            this._TextInput_47_4.ngAfterContentChecked();
+            this._TextInput_47_11.ngAfterContentChecked();
             if ((this.numberOfChecks === 0)) {
                 this._Item_42_4.ngAfterContentInit();
             }
-            this._TextInput_56_4.ngAfterContentChecked();
+            this._TextInput_56_9.ngAfterContentChecked();
             if ((this.numberOfChecks === 0)) {
                 this._Item_51_4.ngAfterContentInit();
             }
-            this._TextInput_65_4.ngAfterContentChecked();
+            this._TextInput_65_11.ngAfterContentChecked();
             if ((this.numberOfChecks === 0)) {
                 this._Item_60_4.ngAfterContentInit();
             }
@@ -817,6 +1335,251 @@ var _View_RegistrationPage0 = (function (_super) {
             this.renderer.setElementClass(this._el_11, 'ng-invalid', currVal_10);
             this._expr_10 = currVal_10;
         }
+        var currVal_13 = (this._RequiredValidator_20_4.required ? '' : null);
+        if (import4.checkBinding(throwOnChange, this._expr_13, currVal_13)) {
+            this.renderer.setElementAttribute(this._el_20, 'required', ((currVal_13 == null) ? null : currVal_13.toString()));
+            this._expr_13 = currVal_13;
+        }
+        var currVal_15 = (this._MaxLengthValidator_20_5.maxlength ? this._MaxLengthValidator_20_5.maxlength : null);
+        if (import4.checkBinding(throwOnChange, this._expr_15, currVal_15)) {
+            this.renderer.setElementAttribute(this._el_20, 'maxlength', ((currVal_15 == null) ? null : currVal_15.toString()));
+            this._expr_15 = currVal_15;
+        }
+        var currVal_18 = this._NgControlStatus_20_9.ngClassUntouched;
+        if (import4.checkBinding(throwOnChange, this._expr_18, currVal_18)) {
+            this.renderer.setElementClass(this._el_20, 'ng-untouched', currVal_18);
+            this._expr_18 = currVal_18;
+        }
+        var currVal_19 = this._NgControlStatus_20_9.ngClassTouched;
+        if (import4.checkBinding(throwOnChange, this._expr_19, currVal_19)) {
+            this.renderer.setElementClass(this._el_20, 'ng-touched', currVal_19);
+            this._expr_19 = currVal_19;
+        }
+        var currVal_20 = this._NgControlStatus_20_9.ngClassPristine;
+        if (import4.checkBinding(throwOnChange, this._expr_20, currVal_20)) {
+            this.renderer.setElementClass(this._el_20, 'ng-pristine', currVal_20);
+            this._expr_20 = currVal_20;
+        }
+        var currVal_21 = this._NgControlStatus_20_9.ngClassDirty;
+        if (import4.checkBinding(throwOnChange, this._expr_21, currVal_21)) {
+            this.renderer.setElementClass(this._el_20, 'ng-dirty', currVal_21);
+            this._expr_21 = currVal_21;
+        }
+        var currVal_22 = this._NgControlStatus_20_9.ngClassValid;
+        if (import4.checkBinding(throwOnChange, this._expr_22, currVal_22)) {
+            this.renderer.setElementClass(this._el_20, 'ng-valid', currVal_22);
+            this._expr_22 = currVal_22;
+        }
+        var currVal_23 = this._NgControlStatus_20_9.ngClassInvalid;
+        if (import4.checkBinding(throwOnChange, this._expr_23, currVal_23)) {
+            this.renderer.setElementClass(this._el_20, 'ng-invalid', currVal_23);
+            this._expr_23 = currVal_23;
+        }
+        var currVal_27 = (this._RequiredValidator_29_4.required ? '' : null);
+        if (import4.checkBinding(throwOnChange, this._expr_27, currVal_27)) {
+            this.renderer.setElementAttribute(this._el_29, 'required', ((currVal_27 == null) ? null : currVal_27.toString()));
+            this._expr_27 = currVal_27;
+        }
+        var currVal_29 = (this._MaxLengthValidator_29_5.maxlength ? this._MaxLengthValidator_29_5.maxlength : null);
+        if (import4.checkBinding(throwOnChange, this._expr_29, currVal_29)) {
+            this.renderer.setElementAttribute(this._el_29, 'maxlength', ((currVal_29 == null) ? null : currVal_29.toString()));
+            this._expr_29 = currVal_29;
+        }
+        var currVal_32 = this._NgControlStatus_29_9.ngClassUntouched;
+        if (import4.checkBinding(throwOnChange, this._expr_32, currVal_32)) {
+            this.renderer.setElementClass(this._el_29, 'ng-untouched', currVal_32);
+            this._expr_32 = currVal_32;
+        }
+        var currVal_33 = this._NgControlStatus_29_9.ngClassTouched;
+        if (import4.checkBinding(throwOnChange, this._expr_33, currVal_33)) {
+            this.renderer.setElementClass(this._el_29, 'ng-touched', currVal_33);
+            this._expr_33 = currVal_33;
+        }
+        var currVal_34 = this._NgControlStatus_29_9.ngClassPristine;
+        if (import4.checkBinding(throwOnChange, this._expr_34, currVal_34)) {
+            this.renderer.setElementClass(this._el_29, 'ng-pristine', currVal_34);
+            this._expr_34 = currVal_34;
+        }
+        var currVal_35 = this._NgControlStatus_29_9.ngClassDirty;
+        if (import4.checkBinding(throwOnChange, this._expr_35, currVal_35)) {
+            this.renderer.setElementClass(this._el_29, 'ng-dirty', currVal_35);
+            this._expr_35 = currVal_35;
+        }
+        var currVal_36 = this._NgControlStatus_29_9.ngClassValid;
+        if (import4.checkBinding(throwOnChange, this._expr_36, currVal_36)) {
+            this.renderer.setElementClass(this._el_29, 'ng-valid', currVal_36);
+            this._expr_36 = currVal_36;
+        }
+        var currVal_37 = this._NgControlStatus_29_9.ngClassInvalid;
+        if (import4.checkBinding(throwOnChange, this._expr_37, currVal_37)) {
+            this.renderer.setElementClass(this._el_29, 'ng-invalid', currVal_37);
+            this._expr_37 = currVal_37;
+        }
+        var currVal_41 = (this._RequiredValidator_38_4.required ? '' : null);
+        if (import4.checkBinding(throwOnChange, this._expr_41, currVal_41)) {
+            this.renderer.setElementAttribute(this._el_38, 'required', ((currVal_41 == null) ? null : currVal_41.toString()));
+            this._expr_41 = currVal_41;
+        }
+        var currVal_43 = (this._MaxLengthValidator_38_5.maxlength ? this._MaxLengthValidator_38_5.maxlength : null);
+        if (import4.checkBinding(throwOnChange, this._expr_43, currVal_43)) {
+            this.renderer.setElementAttribute(this._el_38, 'maxlength', ((currVal_43 == null) ? null : currVal_43.toString()));
+            this._expr_43 = currVal_43;
+        }
+        var currVal_46 = this._NgControlStatus_38_9.ngClassUntouched;
+        if (import4.checkBinding(throwOnChange, this._expr_46, currVal_46)) {
+            this.renderer.setElementClass(this._el_38, 'ng-untouched', currVal_46);
+            this._expr_46 = currVal_46;
+        }
+        var currVal_47 = this._NgControlStatus_38_9.ngClassTouched;
+        if (import4.checkBinding(throwOnChange, this._expr_47, currVal_47)) {
+            this.renderer.setElementClass(this._el_38, 'ng-touched', currVal_47);
+            this._expr_47 = currVal_47;
+        }
+        var currVal_48 = this._NgControlStatus_38_9.ngClassPristine;
+        if (import4.checkBinding(throwOnChange, this._expr_48, currVal_48)) {
+            this.renderer.setElementClass(this._el_38, 'ng-pristine', currVal_48);
+            this._expr_48 = currVal_48;
+        }
+        var currVal_49 = this._NgControlStatus_38_9.ngClassDirty;
+        if (import4.checkBinding(throwOnChange, this._expr_49, currVal_49)) {
+            this.renderer.setElementClass(this._el_38, 'ng-dirty', currVal_49);
+            this._expr_49 = currVal_49;
+        }
+        var currVal_50 = this._NgControlStatus_38_9.ngClassValid;
+        if (import4.checkBinding(throwOnChange, this._expr_50, currVal_50)) {
+            this.renderer.setElementClass(this._el_38, 'ng-valid', currVal_50);
+            this._expr_50 = currVal_50;
+        }
+        var currVal_51 = this._NgControlStatus_38_9.ngClassInvalid;
+        if (import4.checkBinding(throwOnChange, this._expr_51, currVal_51)) {
+            this.renderer.setElementClass(this._el_38, 'ng-invalid', currVal_51);
+            this._expr_51 = currVal_51;
+        }
+        var currVal_55 = (this._RequiredValidator_47_4.required ? '' : null);
+        if (import4.checkBinding(throwOnChange, this._expr_55, currVal_55)) {
+            this.renderer.setElementAttribute(this._el_47, 'required', ((currVal_55 == null) ? null : currVal_55.toString()));
+            this._expr_55 = currVal_55;
+        }
+        var currVal_57 = (this._MinLengthValidator_47_5.minlength ? this._MinLengthValidator_47_5.minlength : null);
+        if (import4.checkBinding(throwOnChange, this._expr_57, currVal_57)) {
+            this.renderer.setElementAttribute(this._el_47, 'minlength', ((currVal_57 == null) ? null : currVal_57.toString()));
+            this._expr_57 = currVal_57;
+        }
+        var currVal_59 = (this._MaxLengthValidator_47_6.maxlength ? this._MaxLengthValidator_47_6.maxlength : null);
+        if (import4.checkBinding(throwOnChange, this._expr_59, currVal_59)) {
+            this.renderer.setElementAttribute(this._el_47, 'maxlength', ((currVal_59 == null) ? null : currVal_59.toString()));
+            this._expr_59 = currVal_59;
+        }
+        var currVal_62 = this._NgControlStatus_47_10.ngClassUntouched;
+        if (import4.checkBinding(throwOnChange, this._expr_62, currVal_62)) {
+            this.renderer.setElementClass(this._el_47, 'ng-untouched', currVal_62);
+            this._expr_62 = currVal_62;
+        }
+        var currVal_63 = this._NgControlStatus_47_10.ngClassTouched;
+        if (import4.checkBinding(throwOnChange, this._expr_63, currVal_63)) {
+            this.renderer.setElementClass(this._el_47, 'ng-touched', currVal_63);
+            this._expr_63 = currVal_63;
+        }
+        var currVal_64 = this._NgControlStatus_47_10.ngClassPristine;
+        if (import4.checkBinding(throwOnChange, this._expr_64, currVal_64)) {
+            this.renderer.setElementClass(this._el_47, 'ng-pristine', currVal_64);
+            this._expr_64 = currVal_64;
+        }
+        var currVal_65 = this._NgControlStatus_47_10.ngClassDirty;
+        if (import4.checkBinding(throwOnChange, this._expr_65, currVal_65)) {
+            this.renderer.setElementClass(this._el_47, 'ng-dirty', currVal_65);
+            this._expr_65 = currVal_65;
+        }
+        var currVal_66 = this._NgControlStatus_47_10.ngClassValid;
+        if (import4.checkBinding(throwOnChange, this._expr_66, currVal_66)) {
+            this.renderer.setElementClass(this._el_47, 'ng-valid', currVal_66);
+            this._expr_66 = currVal_66;
+        }
+        var currVal_67 = this._NgControlStatus_47_10.ngClassInvalid;
+        if (import4.checkBinding(throwOnChange, this._expr_67, currVal_67)) {
+            this.renderer.setElementClass(this._el_47, 'ng-invalid', currVal_67);
+            this._expr_67 = currVal_67;
+        }
+        var currVal_70 = (this._RequiredValidator_56_4.required ? '' : null);
+        if (import4.checkBinding(throwOnChange, this._expr_70, currVal_70)) {
+            this.renderer.setElementAttribute(this._el_56, 'required', ((currVal_70 == null) ? null : currVal_70.toString()));
+            this._expr_70 = currVal_70;
+        }
+        var currVal_73 = this._NgControlStatus_56_8.ngClassUntouched;
+        if (import4.checkBinding(throwOnChange, this._expr_73, currVal_73)) {
+            this.renderer.setElementClass(this._el_56, 'ng-untouched', currVal_73);
+            this._expr_73 = currVal_73;
+        }
+        var currVal_74 = this._NgControlStatus_56_8.ngClassTouched;
+        if (import4.checkBinding(throwOnChange, this._expr_74, currVal_74)) {
+            this.renderer.setElementClass(this._el_56, 'ng-touched', currVal_74);
+            this._expr_74 = currVal_74;
+        }
+        var currVal_75 = this._NgControlStatus_56_8.ngClassPristine;
+        if (import4.checkBinding(throwOnChange, this._expr_75, currVal_75)) {
+            this.renderer.setElementClass(this._el_56, 'ng-pristine', currVal_75);
+            this._expr_75 = currVal_75;
+        }
+        var currVal_76 = this._NgControlStatus_56_8.ngClassDirty;
+        if (import4.checkBinding(throwOnChange, this._expr_76, currVal_76)) {
+            this.renderer.setElementClass(this._el_56, 'ng-dirty', currVal_76);
+            this._expr_76 = currVal_76;
+        }
+        var currVal_77 = this._NgControlStatus_56_8.ngClassValid;
+        if (import4.checkBinding(throwOnChange, this._expr_77, currVal_77)) {
+            this.renderer.setElementClass(this._el_56, 'ng-valid', currVal_77);
+            this._expr_77 = currVal_77;
+        }
+        var currVal_78 = this._NgControlStatus_56_8.ngClassInvalid;
+        if (import4.checkBinding(throwOnChange, this._expr_78, currVal_78)) {
+            this.renderer.setElementClass(this._el_56, 'ng-invalid', currVal_78);
+            this._expr_78 = currVal_78;
+        }
+        var currVal_82 = (this._RequiredValidator_65_4.required ? '' : null);
+        if (import4.checkBinding(throwOnChange, this._expr_82, currVal_82)) {
+            this.renderer.setElementAttribute(this._el_65, 'required', ((currVal_82 == null) ? null : currVal_82.toString()));
+            this._expr_82 = currVal_82;
+        }
+        var currVal_84 = (this._MinLengthValidator_65_5.minlength ? this._MinLengthValidator_65_5.minlength : null);
+        if (import4.checkBinding(throwOnChange, this._expr_84, currVal_84)) {
+            this.renderer.setElementAttribute(this._el_65, 'minlength', ((currVal_84 == null) ? null : currVal_84.toString()));
+            this._expr_84 = currVal_84;
+        }
+        var currVal_86 = (this._MaxLengthValidator_65_6.maxlength ? this._MaxLengthValidator_65_6.maxlength : null);
+        if (import4.checkBinding(throwOnChange, this._expr_86, currVal_86)) {
+            this.renderer.setElementAttribute(this._el_65, 'maxlength', ((currVal_86 == null) ? null : currVal_86.toString()));
+            this._expr_86 = currVal_86;
+        }
+        var currVal_89 = this._NgControlStatus_65_10.ngClassUntouched;
+        if (import4.checkBinding(throwOnChange, this._expr_89, currVal_89)) {
+            this.renderer.setElementClass(this._el_65, 'ng-untouched', currVal_89);
+            this._expr_89 = currVal_89;
+        }
+        var currVal_90 = this._NgControlStatus_65_10.ngClassTouched;
+        if (import4.checkBinding(throwOnChange, this._expr_90, currVal_90)) {
+            this.renderer.setElementClass(this._el_65, 'ng-touched', currVal_90);
+            this._expr_90 = currVal_90;
+        }
+        var currVal_91 = this._NgControlStatus_65_10.ngClassPristine;
+        if (import4.checkBinding(throwOnChange, this._expr_91, currVal_91)) {
+            this.renderer.setElementClass(this._el_65, 'ng-pristine', currVal_91);
+            this._expr_91 = currVal_91;
+        }
+        var currVal_92 = this._NgControlStatus_65_10.ngClassDirty;
+        if (import4.checkBinding(throwOnChange, this._expr_92, currVal_92)) {
+            this.renderer.setElementClass(this._el_65, 'ng-dirty', currVal_92);
+            this._expr_92 = currVal_92;
+        }
+        var currVal_93 = this._NgControlStatus_65_10.ngClassValid;
+        if (import4.checkBinding(throwOnChange, this._expr_93, currVal_93)) {
+            this.renderer.setElementClass(this._el_65, 'ng-valid', currVal_93);
+            this._expr_93 = currVal_93;
+        }
+        var currVal_94 = this._NgControlStatus_65_10.ngClassInvalid;
+        if (import4.checkBinding(throwOnChange, this._expr_94, currVal_94)) {
+            this.renderer.setElementClass(this._el_65, 'ng-invalid', currVal_94);
+            this._expr_94 = currVal_94;
+        }
         this.detectViewChildrenChanges(throwOnChange);
         if (!throwOnChange) {
             if ((this.numberOfChecks === 0)) {
@@ -825,12 +1588,18 @@ var _View_RegistrationPage0 = (function (_super) {
         }
     };
     _View_RegistrationPage0.prototype.destroyInternal = function () {
-        this._TextInput_20_4.ngOnDestroy();
-        this._TextInput_29_4.ngOnDestroy();
-        this._TextInput_38_4.ngOnDestroy();
-        this._TextInput_47_4.ngOnDestroy();
-        this._TextInput_56_4.ngOnDestroy();
-        this._TextInput_65_4.ngOnDestroy();
+        this._NgModel_20_7.ngOnDestroy();
+        this._TextInput_20_10.ngOnDestroy();
+        this._NgModel_29_7.ngOnDestroy();
+        this._TextInput_29_10.ngOnDestroy();
+        this._NgModel_38_7.ngOnDestroy();
+        this._TextInput_38_10.ngOnDestroy();
+        this._NgModel_47_8.ngOnDestroy();
+        this._TextInput_47_11.ngOnDestroy();
+        this._NgModel_56_6.ngOnDestroy();
+        this._TextInput_56_9.ngOnDestroy();
+        this._NgModel_65_8.ngOnDestroy();
+        this._TextInput_65_11.ngOnDestroy();
         this._Content_9_4.ngOnDestroy();
     };
     _View_RegistrationPage0.prototype._handle_submit_11_0 = function ($event) {
@@ -843,11 +1612,41 @@ var _View_RegistrationPage0 = (function (_super) {
         var pd_0 = (this._NgForm_11_3.onReset() !== false);
         return (true && pd_0);
     };
+    _View_RegistrationPage0.prototype._handle_ngModelChange_20_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = ((this.context.firstname = $event) !== false);
+        return (true && pd_0);
+    };
+    _View_RegistrationPage0.prototype._handle_ngModelChange_29_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = ((this.context.lastname = $event) !== false);
+        return (true && pd_0);
+    };
+    _View_RegistrationPage0.prototype._handle_ngModelChange_38_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = ((this.context.email = $event) !== false);
+        return (true && pd_0);
+    };
+    _View_RegistrationPage0.prototype._handle_ngModelChange_47_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = ((this.context.password = $event) !== false);
+        return (true && pd_0);
+    };
+    _View_RegistrationPage0.prototype._handle_ngModelChange_65_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = ((this.context.mobile = $event) !== false);
+        return (true && pd_0);
+    };
+    _View_RegistrationPage0.prototype._handle_click_73_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = (this.context.signUp() !== false);
+        return (true && pd_0);
+    };
     return _View_RegistrationPage0;
 }(import1.AppView));
 export function viewFactory_RegistrationPage0(viewUtils, parentInjector, declarationEl) {
     if ((renderType_RegistrationPage === null)) {
-        (renderType_RegistrationPage = viewUtils.createRenderComponentType('/Users/mackalvin/Downloads/ISI-V2/.tmp/pages/registration/registration.html', 0, import9.ViewEncapsulation.None, styles_RegistrationPage, {}));
+        (renderType_RegistrationPage = viewUtils.createRenderComponentType('/Users/mackalvin/Project/Intuitive Surgical/demo/ISI-V2/.tmp/pages/registration/registration.html', 0, import11.ViewEncapsulation.None, styles_RegistrationPage, {}));
     }
     return new _View_RegistrationPage0(viewUtils, parentInjector, declarationEl);
 }

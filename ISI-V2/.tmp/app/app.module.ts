@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { RegistrationPage } from '../pages/registration/registration';
+import { Auth } from '../providers/auth';
+import { Common } from '../providers/common';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,6 @@ import { RegistrationPage } from '../pages/registration/registration';
     LoginPage,
     RegistrationPage
   ],
-  providers: []
+  providers: [Storage, Auth, Common]
 })
 export class AppModule {}

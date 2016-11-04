@@ -2,7 +2,7 @@
   <div>
     <img src="assets/img/isi_logo.png">
   </div>
-  <form name="signinForm" novalidate="" ng-submit="view.signIn(signinForm)">
+  <form name="signinForm" novalidate="">
     
     <ion-list>
     
@@ -11,10 +11,10 @@
         <ion-input 
                   type="text"
                   name="username" 
-                  ng-model="view.username" 
-                  ng-minlength="5" 
-                  ng-maxlength="25" 
-                  required>
+                  [(ngModel)]="username" 
+                  ngModel minlength="5" 
+                  ngModel maxlength="25" 
+                  ngModel required>
         </ion-input>
       </ion-item>
       
@@ -23,21 +23,21 @@
         <ion-input 
                   type="password"
                   name="password"
-                  ng-model="view.password" 
-                  ng-minlength="5" 
-                  ng-maxlength="25"
-                  required>
+                  [(ngModel)]="password" 
+                  ngModel minlength="5" 
+                  ngModel maxlength="25" 
+                  ngModel required>
         </ion-input>
       </ion-item>
     
     </ion-list>
       
      <p class="align-center">
-        <button ion-button class="button-background">Sign In</button>
+        <button ion-button class="button-background" (click)="signIn()">Sign In</button>
      </p>
   </form>
   <p class="text-center mob-flex-center mob-content-center">
-    <a (click)="signUp()">Not Registered? Sign Up.</a>
+    <a (click)="signUpForm()">Not Registered? Sign Up.</a>
     <button class="button forget-password-button" (click)="forgotPassword()">Forgot Password</button>
   </p>
 </ion-content>

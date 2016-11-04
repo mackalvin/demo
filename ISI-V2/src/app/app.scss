@@ -104,6 +104,21 @@
     border-bottom-color: #87949c !important;
     box-shadow: inset 0 -1px 0 0 #87949c !important;
 }
+.button-md.activated{
+    background-color: #3a3636;
+}
+.alert-md .alert-button {
+    position: relative;
+    overflow: hidden;
+    margin: 0 8px 0 0;
+    padding: 10px;
+    border-radius: 2px;
+    font-weight: 500;
+    text-align: right;
+    text-transform: uppercase;
+    color: #87949c;
+    background-color: transparent;
+}
 .button-background{
 	background-color: #87949c;
 	width: 275px !important;
